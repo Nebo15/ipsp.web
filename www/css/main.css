@@ -1,0 +1,437 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700&subset=latin,cyrillic);
+
+/* Base elements */
+
+html, body{
+  height:100%;
+}
+
+body {
+  /*font-family: 'Open Sans', sans-serif;
+  font-size: 14px;*/
+  font-weight: 300;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: rgb(50, 50, 50);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+a:hover, a:focus {
+  color: rgb(219, 82, 47);
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  min-height: 50%;
+  padding-top: 4%;
+  text-align: center;
+  color: #FFF;
+  text-rendering: optimizelegibility;
+  padding-bottom: 250px;
+
+  background-image: url(../img/pages/landing/marquee-md.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 -200px;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+}
+
+.header-text {
+  font-size: 50px;
+}
+
+.header-text,
+.header-lead {
+  font-weight: 200;
+  line-height: 1em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  line-height: 1.1em;
+}
+
+/* FOOTER */
+.footer {
+  height: 70px;
+  background: #333;
+  font-size: 13px;
+}
+
+.copyright {
+  padding: 28px 40px 0 40px;
+  color: #E3E3E3;
+}
+
+.copyright-logo {
+  max-width: 100%;
+  width: 62.5px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+/* DEVICE&CAROUSEL */
+.device {
+  width: 750px;
+  max-width: 100%;
+}
+
+.device-bage-playMarket {
+  position: relative;
+  top: -50px;
+
+  opacity: 0.9;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.device-bage-playMarket:hover {
+  opacity: 1;
+}
+
+.device-carousel-inner {
+  position: absolute;
+  top: 82px;
+  bottom: 82px;
+  right: 74px;
+  left: 76px;
+  width: auto;
+  background: #000;
+}
+
+.device-carousel-item,
+.device-carousel-item .device-carousel-screenshot {
+  width: 600px;
+  max-width: 100%;
+}
+
+.device-carousel-item {
+  width: 600px;
+  height: 375px;
+}
+
+.device-carousel-indicators {
+  bottom: 72px;
+}
+
+.device-carousel-control {
+  position: absolute;
+  left: 1px;
+}
+
+/* CONTENT */
+.ribbon {
+  /*margin-top: 260px;*/
+  background: #FEFEFE;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+}
+
+.ribbon-pull-up {
+  margin-top: -230px;
+  text-align: center;
+  max-width: 100%;
+  display: block;
+}
+
+/* CONTENT: Sections */
+.section-header {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.section-header.first {
+  margin-top: 0;
+}
+
+/* CONTENT: Features */
+.features {
+  text-align: center;
+}
+
+.features-row {
+  margin-top: 40px;
+}
+
+.features-row:first-child {
+  margin-top: 0;
+}
+
+.features-item {
+  margin-bottom: 40px;
+}
+
+.features-icon {
+  display: block;
+  font-size: 5em;
+}
+
+/* CONTENT: Testimonials */
+.quote-box {
+  margin-bottom: 45px;
+  display: table;
+}
+
+.quote-box-inner {
+  padding: 30px 30px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #FFF;
+}
+
+.quote-box:nth-child(odd) .quote-box-inner {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.quote-person-box {
+  padding-right: 35px;
+}
+
+.quote-box:nth-child(odd) .quote-person-box {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 35px;
+}
+
+.quote-box-inner:before {
+  top: 30px;
+  border: transparent solid;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #FFF;
+  border-width: 20px;
+  left: -35px;
+}
+
+.quote-box:nth-child(odd) .quote-box-inner:before {
+  border-right-color: transparent;
+  border-left-color: #FFF;
+  right: -35px;
+  left: auto;
+}
+
+.quote-person {
+  width: 120px;
+}
+
+.quote {
+  color: #2d303b;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.quote-cite {
+  display: block;
+  line-height: 1.428571429;
+  color: #999999;
+  font-size: 85%;
+  font-style: normal;
+}
+
+.quote-cite:before {
+  content: '\2014 \00A0';
+}
+
+.quote-box-inner,
+.quote-person-box {
+  display: table-cell;
+}
+
+/* CONTENT: Subscription form */
+.subscription-form {
+
+  text-align: left;
+}
+
+.subscription-form-row {
+  margin: 40px 0;
+}
+
+/* Loader spinner for any purposes */
+.has-spinner .spinner {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+
+  -webkit-transition: opacity 0.45s, max-width 0.75s;
+  -moz-transition: opacity 0.45s, max-width 0.75s;
+  -o-transition: opacity 0.45s, max-width 0.75s;
+  transition: opacity 0.45s, max-width 0.75s; /* Duration fixed since we animate additional hidden width */
+}
+
+.has-spinner.show-spinner {
+  cursor:progress;
+}
+
+.has-spinner.show-spinner .spinner {
+  opacity: 1;
+  max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
+}
+
+.has-spinner [class*="icon"]:not(.spinner) {
+  -webkit-transition: opacity 0.2s, max-width 0.2s;
+  -moz-transition: opacity 0.2s, max-width 0.2s;
+  -ms-transition: opacity 0.2s, max-width 0.2s;
+  -o-transition: opacity 0.2s, max-width 0.2s;
+  transform: opacity 0.2s, max-width 0.2s;
+}
+
+.has-spinner.show-spinner [class*="icon"]:not(.spinner) {
+  opacity: 0;
+  max-width: 0;
+}
+
+.has-spinner:not(.show-spinner) .icon-spin {
+  -moz-animation: none;
+  -o-animation: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 95%;
+  }
+
+  .header-text {
+    font-size: 30px;
+  }
+
+  .header-lead {
+    font-size: 20px;
+  }
+
+  .section-header {
+    font-size: 20px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 16px;
+  }
+
+  .subscription-form .col-xs-10 {
+    padding: 0 10px;
+  }
+
+  .subscription-btn-submit {
+    margin-top: 10px;
+  }
+
+  .header {
+    background-image: url(../img/pages/landing/marquee-xs.jpg);
+  }
+
+  .device-carousel-inner {
+    top: 31px;
+    bottom: 31px;
+    right: 28px;
+    left: 29px;
+  }
+
+  .quote-person-box {
+    padding-right: 10px;
+  }
+
+  .quote-box:nth-child(odd) .quote-person-box {
+    padding-left: 10px;
+    color: #000;
+  }
+
+  .quote-box-inner {
+    padding: 10px 10px;
+  }
+
+  .quote-box-inner:before {
+    border-width: 7px;
+    left: -14px;
+    top: 15px;
+    color: #000;
+  }
+
+  .quote-box:nth-child(odd) .quote-box-inner:before {
+    right: -14px;
+    color: #000;
+  }
+
+  .quote-person {
+    width: 40px;
+  }
+
+  .device-carousel-indicators {
+    display: none;
+  }
+
+  .section-header {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .device-carousel-inner {
+    top: 65px;
+    bottom: 66px;
+    right: 59px;
+    left: 61px;
+  }
+
+  .device-carousel-indicators {
+    bottom: 54px;
+  }
+
+  .header {
+    background-image: url(../img/pages/landing/marquee-sm.jpg);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .device-carousel-inner {
+    top: 67px;
+    bottom: 68px;
+    right: 61px;
+    left: 63px;
+  }
+
+  .device-carousel-indicators {
+    bottom: 55px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 2000px) {
+  .header {
+    background-image: url(../img/pages/landing/marquee.jpg);
+  }
+}
