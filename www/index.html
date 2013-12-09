@@ -189,6 +189,38 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script src="/vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script type="text/javascript">
+      $('.subscription-form').submit(function(event) {
+        event.preventDefault();
+
+        var $this = $(this);
+        var $input = $this.find('.subscription-input-email');
+        var $group = $this.find('.form-group');
+        var $btn = $this.find('.subscription-btn-submit')
+
+        var email = $input.val();
+
+        if(!validateEmail(email)) {
+          $input.css('color', '#cc3333');
+          $group.addClass('has-error');
+          $input.focus();
+        } else {
+          $btn.addClass('show-spinner');
+          $btn.add($input).attr('disabled', 'true');
+          $group.removeClass('has-error');
+          $.post('/form.php', {email: email, type:'json'}).done(function() {
+            $btn.removeClass('show-spinner');
+            $('.success-msg').show('slow');
+            $input.css('color', '#000');
+          });
+        }
+      });
+
+      function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
+    </script>
+    <script type="text/javascript">
     $(function() {
       $('.scrollTo').click(function() {
         $.scrollTo($(this).attr('href'), 1000);
