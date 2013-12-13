@@ -119,7 +119,10 @@ body {
 
 
 /* FOOTER */
-.partner-logo {
+.partner-logo-box {
+  background-color: #FFF;
+  width: 100px;
+
   height: 33px;
   opacity: 0.8;
   border-radius: 3px;
@@ -131,9 +134,14 @@ body {
   transition: opacity 300ms ease;
 }
 
-.partner-logo:hover {
+.partner-logo {
+  height: 33px;
+}
+
+.partner-logo-box:hover {
   opacity: 1;
 }
+
 
 .partner-logos {
   padding-top: 20px !important;
@@ -151,9 +159,9 @@ body {
   }
 
   /* Navbar positioning foo */
-  .navbar-wrapper {
+/*  .navbar-wrapper {
     margin-top: 20px;
-  }
+  }*/
   .navbar-wrapper .container {
     padding-left:  15px;
     padding-right: 15px;
