@@ -21,6 +21,7 @@
   <meta http-equiv=X-UA-Compatible content=IE=edge>
 
   <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/default.min.css">
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.css' rel='stylesheet' />
 </head>
 
 <!-- activate scrollspy -->
@@ -47,7 +48,7 @@
   </nav>
 
   <!-- Home Page -->
-  <div id="home" class="page color-1" style="background: url(/img/Fotolia_credit-cards.jpg); background-size: cover; background-repeat: no-repeat; text-shadow: 0 1px 2px rgba(0,0,0,0.9);">
+  <div id="home" class="page color-1" astyle="background: url(/img/Fotolia_credit-cards.jpg); background-size: cover; background-repeat: no-repeat; text-shadow: 0 1px 2px rgba(0,0,0,0.9);">
     <div class="inner-page">
       <h2 class="page-headline large">Когда простота интеграции - залог выживаемости проекта</h2>
     </div>
@@ -213,15 +214,14 @@ curl https://api.ipsp.com/v1/transactions \
       <h2 class="page-headline">Контакты</h2>
     </div>
     <div class="row inner-page contact">
-      <div class="col-md-6">
-        г. Москва
+      <div class="col-md-12">
+        <p>ООО "ИПСП"</p>
+        <p><b>Адрес:</b> 119019, г. Москва, Большой Афанасьевский пер., д. 41</p>
+        <p><b>Телефон:</b> +7-495-604-1206</p>
       </div>
-      <div class="col-md-6">
-        <div class="btn-container centered lazy-container text-center">
-          <img src="img/pixel.png" class="lazy figurette" alt="Open the map" data-original="img/map.png" />
-          <a class="lightbox iframe  btn-map" target="blank" title="Open google maps" href="https://maps.google.com/maps?q=Stationsplein,+1012+Centrum,+Amsterdam,+Noord-Holland,+The+Netherlands&amp;hl=en"><i class="pull-left fa fa-map-marker"></i><div>Stationsplein, 1012 AB,<br />Amsterdam,<br /> The Netherlands</div></a>
-        </div>
-      </div>
+    </div>
+    <div class="row inner-page contact map">
+      <div class="col-md-12" id="mapbox_map"></div>
     </div>
   </div> <!-- /#contact -->
 
@@ -258,10 +258,17 @@ curl https://api.ipsp.com/v1/transactions \
   <script src="js/lightbox.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/jquery.history.js"></script>
-  <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+  <script src="//yandex.st/highlightjs/7.5/highlight.min.js"></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.js'></script>
 
     <!-- Main js fail. -->
   <script src="js/main.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    var map = L.mapbox.map('mapbox_map', 'andrewdryga.gie99plh')
+      .setView([55.75003, 37.59703], 15);
+
+      map.scrollWheelZoom.disable();
+  </script>
 </body>
 </html>

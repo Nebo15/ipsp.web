@@ -7652,7 +7652,10 @@ img.mfp-img {
   opacity: 0;
 }
 
-
+.contact {
+  text-align: center;
+  padding-bottom: 0;
+}
 
 .subscription-btn-submit {
   margin-top: 0 !important;
@@ -7661,4 +7664,20 @@ img.mfp-img {
 .code-example {
   font-size: 14px !important;
   margin-top: 42px;
+}
+
+.map {
+  height: 300px;
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+#mapbox_map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 300px;
 }
