@@ -7681,3 +7681,7 @@ img.mfp-img {
   right: 0;
   height: 280px;
 }
+
+.btn-share {
+  color: #FFF !important;
+}

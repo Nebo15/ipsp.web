@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>The Story - responsive landing page</title>
+  <title>IPSP - credit card prosessing for startups</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <meta name="description" content="Twitter bootstrap theme">
-  <meta name="author" content="prettystrap">
+  <meta name="description" content="Worldwide processing solution for startups">
+  <meta name="author" content="nebo15.com">
+  <meta name="keywords" content="процессинг, приём оплаты, рекарринг, безакцептное списание, ipsp, internet payment service provider">
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:domain" content="IPSP.com" />
+  <meta name="twitter:title" content="IPSP.com - процессинг для стартапов" />
+  <meta name="twitter:twitter:creator" content="Nebo15" />
 
   <!-- Load The Story -->
   <link id="the-story-css-file"href="css/the-story.css" rel="stylesheet" media="screen">
@@ -15,9 +21,9 @@
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-      <script src="/js/html5shiv.js"></script>
-      <script src="/js/respond.min.js"></script>
-      <![endif]-->
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+  <![endif]-->
   <meta http-equiv=X-UA-Compatible content=IE=edge>
 
   <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/default.min.css">
@@ -25,7 +31,6 @@
 </head>
 
 <!-- activate scrollspy -->
-
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-container">
@@ -39,16 +44,16 @@
       <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Домой</a></li>
-          <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Преимущества</a></li>
-          <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> О нас</a></li>
-          <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Контакты</a></li>
+          <li><a title="Почему вы должны выбрать нас" href="#features" class=" scroll brand-4">Преимущества</a></li>
+          <li><a title="Кто мы такие" href="#about" class="scroll fadeto brand-4"> О нас</a></li>
+          <li><a title="Как с нами связаться" href="#contact" class="scroll brand-2">Контакты</a></li>
         </ul>
       </div>
     </div><!-- /.navbar-container -->
   </nav>
 
   <!-- Home Page -->
-  <div id="home" class="page color-1" astyle="background: url(/img/Fotolia_credit-cards.jpg); background-size: cover; background-repeat: no-repeat; text-shadow: 0 1px 2px rgba(0,0,0,0.9);">
+  <div id="home" class="page color-1">
     <div class="inner-page">
       <h2 class="page-headline large">Когда простота интеграции - залог выживаемости проекта</h2>
     </div>
@@ -64,7 +69,7 @@
           <li><i class="fa fa-shield"></i> Сертификация PSI DSS и поддержка 3-D Secure</li>
         </ul>
         <br />
-        <a href="#features" title="Check out more freatures!" class="scroll btn btn-primary btn-centered"><i class="fa fa-caret-down"></i> Узнать больше</a>
+        <a href="#features" title="Зацените остальные фичи!" class="scroll btn btn-primary btn-centered"><i class="fa fa-caret-down"></i> Узнать больше</a>
       </div>
     </div>
   </div> <!-- /#home -->
@@ -75,18 +80,28 @@
       <div class="col-md-12">
         <h4 class="text-center">Подпишитесь чтобы узнать о начале бета-тестирования</h4>
 
-        <div class="col-md-10 col-md-offset-1">
-          <form class="subscription-form" action="/form.php" method="POST">
-            <div class="input-group form-group text-center">
-              <input type="email" class="form-control input-default subscription-input-email" name="email" placeholder="Ваш email" required="">
-              <span class="input-group-btn">
-                <button type="submit" class="btn btn-primary btn-default subscription-btn-submit has-spinner">
-                  <span class="spinner icon icon-spin icon-refresh"></span>
-                  Подписаться
-                </button>
-              </span>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <form class="subscription-form" action="/form.php" method="POST">
+              <div class="input-group form-group text-center">
+                <input type="email" class="form-control input-default subscription-input-email" name="email" placeholder="Ваш email" required="">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-default subscription-btn-submit has-spinner">
+                    <span class="spinner icon icon-spin icon-refresh"></span>
+                    Подписаться
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="text-center success-msg" style="display:none">
+              <p class="lead">Спасибо. Наш специалист свяжется с вами в ближайшее время.</p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -144,10 +159,26 @@ curl https://api.ipsp.com/v1/transactions \
       </div>
       <div class="inner-page row">
         <ul class="clients list-inline">
-          <li><i class="fa fa-vk"></i> Vk.com</li>
-          <li><i class="fa fa-facebook"></i> Facebook</li>
-          <li><i class="fa fa-twitter"></i> Twitter</li>
-          <li><i class="fa fa-envelope"></i> Email</li>
+          <li>
+            <a href="http://vkontakte.ru/share.php?url=http://ipsp.com" class="btn-share">
+              <i class="fa fa-vk"></i> Vk.com
+            </a>
+          </li>
+          <li>
+            <a href="http://www.facebook.com/sharer.php?u=http://ipsp.com&t=IPSP.com&src=sp" class="btn-share">
+              <i class="fa fa-facebook"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="http://twitter.com/share?url=http://ipsp.com&text=Payment processing solution for startups" class="btn-share">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+          </li>
+          <li>
+            <a href="mailto:?subject=IPSP.com&body=Check out new processing i've found: IPSP.com" class="btn-share">
+              <i class="fa fa-envelope"></i> Email
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -229,10 +260,8 @@ curl https://api.ipsp.com/v1/transactions \
   <footer class="page color-5">
     <div class="inner-page row">
       <div class="col-md-6 social">
-        <a href="#contact"><i class="fa fa-twitter"></i></a>
-        <a href="#contact"><i class="fa fa-github-square"></i></a>
-        <a href="#contact"><i class="fa fa-facebook-square"></i></a>
-        <a href="#contact"><i class="fa fa-google-plus-square"></i></a>
+        <a href="https://twitter.com/IPSP_com"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/nebo15"><i class="fa fa-github-square"></i></a>
       </div>
       <div class="col-md-6 text-right copyright">
         &copy; 2013 <a href="http://ipsp.com" title="twitter bootstrap themes">IPSP.com</a> by <a href="http://creditpilot.ru" title="twitter bootstrap themes">CreditPilot</a> | <a href="#top" title="Got to top" class="scroll">To top <i class="fa fa-caret-up"></i></a>
@@ -269,6 +298,39 @@ curl https://api.ipsp.com/v1/transactions \
       .setView([55.75003, 37.59703], 15);
 
       map.scrollWheelZoom.disable();
+  </script>
+
+  <script type="text/javascript">
+    $('.subscription-form').submit(function(event) {
+      event.preventDefault();
+
+      var $this = $(this);
+      var $input = $this.find('.subscription-input-email');
+      var $group = $this.find('.form-group');
+      var $btn = $this.find('.subscription-btn-submit')
+
+      var email = $input.val();
+
+      if(!validateEmail(email)) {
+        $input.css('color', '#cc3333');
+        $group.addClass('has-error');
+        $input.focus();
+      } else {
+        $btn.addClass('show-spinner');
+        $btn.add($input).attr('disabled', 'true');
+        $group.removeClass('has-error');
+        $.post('/form.php', {email: email, type:'json'}).done(function() {
+          $btn.removeClass('show-spinner');
+          $('.success-msg').show('slow');
+          $input.css('color', '#000');
+        });
+      }
+    });
+
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
   </script>
 </body>
 </html>
