@@ -54,8 +54,8 @@ if(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'subscribe') 
   $merge_vars = [
     'phone' => filter_var($_REQUEST['phone'], FILTER_SANITIZE_STRING),
     'name' => filter_var($_REQUEST['name'], FILTER_SANITIZE_STRING),
-    'comments' => filter_var($_REQUEST['comments'], FILTER_SANITIZE_STRING),
-    'user_type' => filter_var($_REQUEST['type'], FILTER_SANITIZE_STRING),
+    'message' => filter_var($_REQUEST['message'], FILTER_SANITIZE_STRING),
+    'user_type' => filter_var($_REQUEST['user_type'], FILTER_SANITIZE_STRING),
     'email' => $email
   ];
 
