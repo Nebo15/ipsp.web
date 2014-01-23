@@ -1,0 +1,69 @@
+.deepblue{
+    background-color: rgba(53, 59, 73, 0.8);
+}
+
+.features_wrapper{
+	background-image: url("../images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.subscribe_wrapper{
+	background-image: url("../images/bg4.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.clients_wrapper{
+	background-image: url("../images/bg5.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.team_wrapper{
+	background-image: url("../images/bg6.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.price_wrapper{
+	background-image: url("../images/bg7.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.faq_wrapper{
+	background-image: url("../images/bg8.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover; 
+}

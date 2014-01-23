@@ -1,0 +1,32 @@
+
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: none;
+    margin: 0 0 5px;
+    padding: 10px;
+    
+    color: #fff;
+    max-width: 100%;
+	font-family:'Lato',sans-serif;
+}
+
+#contactform input[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #fff;
+    color: #385E82;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+.error{
+	/* color:#EF3A5B; */
+}
+
+#message{
+	padding-bottom:20px;
+}
