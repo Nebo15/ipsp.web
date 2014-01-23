@@ -29,18 +29,18 @@ if(!isset($_REQUEST)) {
   exit('No request data');
 }
 
-// validation
+if(!array_key_exists('email', $_REQUEST)) {
+  exit('Email is not set');
+}
+
+$mc = new Mailchimp('2e371d9fe765a8c1c7f1a1586a281bdf-us7');
 
 if(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'subscribe') {
-  if(!array_key_exists('email', $_REQUEST)) {
-    exit('Email is not set');
-  }
-
   $email = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
 
   $merge_vars = [];
   $merge_vars['EMAIL'] = $email ?: 'noinfo'.microtime(true).'@dontmail.me';
-  $mc = new Mailchimp('2e371d9fe765a8c1c7f1a1586a281bdf-us7');
+
   $result = $mc->lists->subscribe('3dd249cb0d', ['email' => $email], $merge_vars, 'html', false, true);
 
   if(array_key_exists('type', $_REQUEST) && $_REQUEST['type'] == 'json') {
@@ -48,13 +48,7 @@ if(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'subscribe') 
   } else {
     showPage('Перенаправление', 'Ваши данные отправленны, если в течении 5 секунд вы не будете перенаправлены обратно на сайт, то нажмите на <a href="/">ссылку</a>.');
   }
-}
-
-elseif(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'contact') {
-  if(!array_key_exists('email', $_REQUEST)) {
-    exit('Email is not set');
-  }
-
+} elseif(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'contact') {
   $email = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
 
   $merge_vars = [
@@ -65,7 +59,6 @@ elseif(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'contact'
     'email' => $email
   ];
 
-  $mc = new Mailchimp('2e371d9fe765a8c1c7f1a1586a281bdf-us7');
   $result = $mc->lists->subscribe('aefa645432', ['email' => $email], $merge_vars, 'html', false, true);
 
   if(array_key_exists('type', $_REQUEST) && $_REQUEST['type'] == 'json') {
