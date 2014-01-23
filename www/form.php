@@ -61,7 +61,7 @@ elseif(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'contact'
     'phone' => filter_var($_REQUEST['phone'], FILTER_SANITIZE_STRING),
     'name' => filter_var($_REQUEST['name'], FILTER_SANITIZE_STRING),
     'comments' => filter_var($_REQUEST['comments'], FILTER_SANITIZE_STRING),
-    'type' => filter_var($_REQUEST['type'], FILTER_SANITIZE_STRING),
+    'user_type' => filter_var($_REQUEST['type'], FILTER_SANITIZE_STRING),
     'email' => $email
   ];
 
