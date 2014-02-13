@@ -1,15 +1,26 @@
+## Jetbrains
 .idea
-*override.php
-*~*
-*.orig
-*conflicted*
+
+## MacOS
 .DS_Store
+
+## Sublime Text
 *.sublime*
 .sublime*
 .tags
 .tags_sorted_by_file
+
+## Composer and vendor files
 composer.lock
-.vagrant
 vendor/
 
+## Vagrant
+.vagrant
+
+## Git
+*~*
+*conflicted*
+
+## Overrides
+*override.php
 www/lib/Override.js
