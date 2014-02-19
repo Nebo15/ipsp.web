@@ -1,0 +1,88 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body class="body">
+	<!-- BEGIN .wrapper -->
+	<div class="wrapper">
+		<div class="payment__card">
+			<div class="payment__input payment__input_mod">
+				<form class="payment__form" method="post" action="/" name="payment__form">
+					<h5 class="h5">Номер карты</h5>
+					<div class="input__field">
+						<input class="input" id="card_number" type="text" value="" minlength="16" maxlength="18" name="card_number"></input>
+						<label class="error error__inp" for="card_number"></label>
+					</div>
+				</form>
+				<div class="payment__select">
+					<div class="payment__left">
+						<h5 class="h5">Срок действия</h5>
+						<div class="input__field">
+							<div class="select js-select">
+								<span class="select__text js-select-text">02</span>
+								<input class="js-select-input" type="hidden" value="">
+								<ul class="select__list js-select-list">
+									<li data-id="0">01</li>
+									<li data-id="1">02</li>
+									<li data-id="2">03</li>
+									<li data-id="3">04</li>
+									<li data-id="4">05</li>
+									<li data-id="5">06</li>
+									<li data-id="6">07</li>
+									<li data-id="7">08</li>
+									<li data-id="8">09</li>
+									<li data-id="9">10</li>
+									<li data-id="10">11</li>
+									<li data-id="11">12</li>
+								</ul>
+							</div>
+						</div>
+						<div class="input__field">
+							<div class="select js-select">
+								<span class="select__text js-select-text">14</span>
+								<input class="js-select-input" type="hidden" value="13">
+								<ul class="select__list js-select-list">
+									<li data-id="0">14</li>
+									<li data-id="1">15</li>
+									<li data-id="2">16</li>
+									<li data-id="3">17</li>
+									<li data-id="4">18</li>
+									<li data-id="5">19</li>
+									<li data-id="6">20</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="payment__right">
+						<form class="payment__form1" method="post" action="/" name="payment__form1">
+							<h5 class="h5">Код CVV2/CVC2</h5>
+							<div class="input__code">
+								<input class="input" value="" minlength="3" maxlength="4" name="code_cvv2" onkeyup="return proverka_numbers(this);"></input>
+							<label class="error error__code_cvv2" for="code_cvv2"></label>
+							</div>
+						</form>
+					</div>
+				</div>
+				<h5 class="h5">Владелец карты</h5>
+				<div class="input__field">
+					<input class="input input__up" type="text" onkeyup="return proverka(this);"></input>
+				</div>
+				<h5 class="h5 input__field_text">Латинскими буквами как указано на карте</h5>
+			</div>
+		</div>
+			<p class="text__info">Передача данных шифруется высоконадежным 256-битным алгоритмом и осуществляется посредством SSL протокола</p>
+			<a class="btn" href="#">Оплатить</a>
+	</div>
+	<!-- END .wrapper -->
+</body>
+</html>
