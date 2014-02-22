@@ -6,10 +6,11 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.selectBox.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body class="body">
@@ -20,62 +21,53 @@
 				<form class="payment__form" method="post" action="/" name="payment__form">
 					<h5 class="h5">Номер карты</h5>
 					<div class="input__field">
-						<input class="input" id="card_number" type="text" value="" minlength="16" maxlength="18" name="card_number"></input>
-						<label class="error error__inp" for="card_number"></label>
+						<input class="input" id="card_number" type="text" value="" minlength="19" maxlength="21" name="card_number" placeholder=""></input>
+						<label class="error error__inp" for="card_number"></label>	
 					</div>
 				</form>
 				<div class="payment__select">
 					<div class="payment__left">
 						<h5 class="h5">Срок действия</h5>
 						<div class="input__field">
-							<div class="select js-select">
-								<span class="select__text js-select-text">02</span>
-								<input class="js-select-input" type="hidden" value="">
-								<ul class="select__list js-select-list">
-									<li data-id="0">01</li>
-									<li data-id="1">02</li>
-									<li data-id="2">03</li>
-									<li data-id="3">04</li>
-									<li data-id="4">05</li>
-									<li data-id="5">06</li>
-									<li data-id="6">07</li>
-									<li data-id="7">08</li>
-									<li data-id="8">09</li>
-									<li data-id="9">10</li>
-									<li data-id="10">11</li>
-									<li data-id="11">12</li>
-								</ul>
-							</div>
+							<select>
+					            <option value="1">01</option>
+					            <option value="2" class="selectBox-selected">02</option>
+					            <option value="3">03</option>
+					            <option value="4">04</option>
+					            <option value="5">05</option>
+					            <option value="6">06</option>
+					            <option value="7">07</option>
+					            <option value="8">08</option>
+					            <option value="5">09</option>
+					            <option value="6">10</option>
+					            <option value="7">11</option>
+					            <option value="8">12</option>
+					        </select>
 						</div>
 						<div class="input__field">
-							<div class="select js-select">
-								<span class="select__text js-select-text">14</span>
-								<input class="js-select-input" type="hidden" value="13">
-								<ul class="select__list js-select-list">
-									<li data-id="0">14</li>
-									<li data-id="1">15</li>
-									<li data-id="2">16</li>
-									<li data-id="3">17</li>
-									<li data-id="4">18</li>
-									<li data-id="5">19</li>
-									<li data-id="6">20</li>
-								</ul>
-							</div>
+							<select>
+					            <option value="1" class="selectBox-selected">14</option>
+					            <option value="2">15</option>
+					            <option value="3">16</option>
+					            <option value="4">17</option>
+					            <option value="5">18</option>
+					            <option value="6">19</option>
+					        </select>
 						</div>
 					</div>
 					<div class="payment__right">
 						<form class="payment__form1" method="post" action="/" name="payment__form1">
 							<h5 class="h5">Код CVV2/CVC2</h5>
 							<div class="input__code">
-								<input class="input" value="" minlength="3" maxlength="4" name="code_cvv2" onkeyup="return proverka_numbers(this);"></input>
-							<label class="error error__code_cvv2" for="code_cvv2"></label>
+								<input class="input" value="" minlength="3" maxlength="4" name="code_cvv2" onkeyup="return proverka_numbers(this);"></input>	
+							<label class="error error__code_cvv2" for="code_cvv2"></label>	
 							</div>
 						</form>
 					</div>
 				</div>
 				<h5 class="h5">Владелец карты</h5>
 				<div class="input__field">
-					<input class="input input__up" type="text" onkeyup="return proverka(this);"></input>
+					<input class="input input__up" type="text" onkeyup="return proverka(this);"></input>	
 				</div>
 				<h5 class="h5 input__field_text">Латинскими буквами как указано на карте</h5>
 			</div>
