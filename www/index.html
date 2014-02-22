@@ -589,9 +589,35 @@
           </div>
         </div>
       </div>
-      <div class="contact map" style="box-shadow: 0px 0px 25px rgba(0,0,0,0.7) inset;">
-        <div id="yandex_map" style="height:300px; width:100%"></div>
+      <div class="container">
+        <span class="col-md-6">
+          <p>
+            <b>CEMEA IPSP Limited</b> <br />
+            (former Comarnet Tech Limited)<br />
+            <b>Address:</b> <br />
+            31 Evagorou, Evagoras Complex, office 24 <br />
+            Nicosia 1066 Cyprus
+          </p>
+          <p>
+            <b>“IPSP”, Limited</b><br />
+            <b>Address:</b><br />
+            13/41 2-nd Zvenigorodskaya Street, <br />
+            123022, Moscow, Russian Federation
+          </p>
+        </span>
+        <span class="col-md-6">
+          <p>
+            <b>Phones:</b><br />
+            Russian Federation: +7 (495) 604-12-06<br />
+            United States: +1 (347) 809-53-31
+          </p>
+          <p>
+            <b>E-mail:</b><br />
+            info@ipsp.com
+          </p>
+        </span>
       </div>
+
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12">
@@ -644,10 +670,6 @@
   		});
   	});
 	</script>
-    <script>
-    var map,markers=[{lat:55.761376,lng:37.552723,title:'ООО "ИПСП"',address:"Москва, ул. 2-я Звенигородская, д. 13, стр. 41<br>Тел. +7(495)604-1000"}];ymaps.ready(function(){map=new ymaps.Map("yandex_map",{center:
-[55.761376,37.552723],zoom:16}),$.each(markers,function(e,t){var n=new ymaps.Placemark([t.lat,t.lng],{iconContent:t.title,balloonContentHeader:t.title,balloonContentBody:t.address},{preset:"twirl#blueStretchyIcon"});map.geoObjects.add(n)}),map.controls.add(new ymaps.control.ScaleLine).add("zoomControl").add("mapTools")});
-  </script>
     <script type="text/javascript">
     $('.subscription-form').submit(function(event) {
       event.preventDefault();
