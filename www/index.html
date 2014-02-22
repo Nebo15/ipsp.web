@@ -21,12 +21,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-1.0.0.js"></script>
   </head>
-  <body style="       background-color: white;"> <!-- Header Section -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <body style="background-color: white;"> <!-- Header Section -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -646,96 +641,95 @@
     <script src="//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <script type="text/javascript">
     	jQuery(document).ready(function(){
+    		jQuery('.bxslider').bxSlider({
+    			auto: true,
+    			controls:false,
+    			mode:'vertical',
+    			slideMargin: 40
+    		});
 
-  		jQuery('.bxslider').bxSlider({
-  			auto: true,
-  			controls:false,
-  			mode:'vertical',
-  			slideMargin: 40
-  		});
+    		jQuery('.top_wrapper').parallax("50%", 0.4);
+    		jQuery('.features_wrapper').parallax("50%", 0.2);
+    		jQuery('.subscribe_wrapper').parallax("50%", 0.2);
+    		jQuery('.clients_wrapper').parallax("50%", 0.2);
+    		jQuery('.team_wrapper').parallax("50%", 0.2);
+    		jQuery('.price_wrapper').parallax("50%", 0.2);
+    		jQuery('.faq_wrapper').parallax("50%", 0.2);
 
-  		jQuery('.top_wrapper').parallax("50%", 0.4);
-  		jQuery('.features_wrapper').parallax("50%", 0.2);
-  		jQuery('.subscribe_wrapper').parallax("50%", 0.2);
-  		jQuery('.clients_wrapper').parallax("50%", 0.2);
-  		jQuery('.team_wrapper').parallax("50%", 0.2);
-  		jQuery('.price_wrapper').parallax("50%", 0.2);
-  		jQuery('.faq_wrapper').parallax("50%", 0.2);
+    		jQuery('.nav').onePageNav();
 
-  		jQuery('.nav').onePageNav();
+    		jQuery('#nav-wrapper').height($("#nav").height());
 
-  		jQuery('#nav-wrapper').height($("#nav").height());
+    		jQuery('#nav').affix({
+    			offset: { top: $('#nav').offset().top }
+    		});
 
-  		jQuery('#nav').affix({
-  			offset: { top: $('#nav').offset().top }
-  		});
-
-  		jQuery(function() {
-  			jQuery("#toTop").scrollToTop(1000);
-  		});
-  	});
-	</script>
+    		jQuery(function() {
+    			jQuery("#toTop").scrollToTop(1000);
+    		});
+    	});
+    </script>
     <script type="text/javascript">
-    $('.subscription-form').submit(function(event) {
-      event.preventDefault();
+      $('.subscription-form').submit(function(event) {
+        event.preventDefault();
 
-      var $this = $(this);
-      var $input = $this.find('.subscription-input-email');
-      var $group = $this.find('.form-group');
-      var $btn = $this.find('.subscription-btn-submit')
+        var $this = $(this);
+        var $input = $this.find('.subscription-input-email');
+        var $group = $this.find('.form-group');
+        var $btn = $this.find('.subscription-btn-submit')
 
-      var email = $input.val();
+        var email = $input.val();
 
-      if(!validateEmail(email)) {
-        $input.css('color', '#cc3333');
-        $group.addClass('has-error');
-        $input.focus();
-      } else {
-        $btn.add($input).attr('disabled', 'true');
-        $group.removeClass('has-error');
-        $.post('/form.php', {email: email, type:'json', action: 'subscribe'}).done(function() {
-          $('.success-msg').show('slow');
-          $input.css('color', '#000');
-        });
+        if(!validateEmail(email)) {
+          $input.css('color', '#cc3333');
+          $group.addClass('has-error');
+          $input.focus();
+        } else {
+          $btn.add($input).attr('disabled', 'true');
+          $group.removeClass('has-error');
+          $.post('/form.php', {email: email, type:'json', action: 'subscribe'}).done(function() {
+            $('.success-msg').show('slow');
+            $input.css('color', '#000');
+          });
+        }
+
+        return false;
+      });
+
+      $('.contacts-form').submit(function(event) {
+        event.preventDefault();
+
+        var $this = $(this);
+        var $group = $this.find('.form-group');
+        var $btn = $this.find('.contacts-btn-submit');
+
+        var email = $this.find('.contacts-input-email').val();
+        var phone = $this.find('.contacts-input-phone').val();
+        var name = $this.find('.contacts-input-name').val();
+        var message = $this.find('.contacts-input-message').val();
+        var type = $this.find('.contacts-input-type').val();
+
+        if(!validateEmail(email)) {
+          $this.find('.contacts-input-email').css('color', '#cc3333');
+          $group.addClass('has-error');
+          $this.find('.contacts-input-email').focus();
+        } else {
+          $btn.add($this.find('.contacts-input-email')).add($this.find('.contacts-input-phone')).add($this.find('.contacts-input-name')).add($this.find('.contacts-input-message')).add($this.find('.contacts-input-type')).attr('disabled', 'true');
+
+          $group.removeClass('has-error');
+          $.post('/form.php', {email:email, phone:phone, name:name, message:message, user_type:type, type:'json', action: 'contact'}).done(function() {
+            $('.contacts-success-msg').show('slow');
+            $this.find('.contacts-input-email').css('color', '#000');
+          });
+        }
+
+        return false;
+      });
+
+      function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
       }
-
-      return false;
-    });
-
-    $('.contacts-form').submit(function(event) {
-      event.preventDefault();
-
-      var $this = $(this);
-      var $group = $this.find('.form-group');
-      var $btn = $this.find('.contacts-btn-submit');
-
-      var email = $this.find('.contacts-input-email').val();
-      var phone = $this.find('.contacts-input-phone').val();
-      var name = $this.find('.contacts-input-name').val();
-      var message = $this.find('.contacts-input-message').val();
-      var type = $this.find('.contacts-input-type').val();
-
-      if(!validateEmail(email)) {
-        $this.find('.contacts-input-email').css('color', '#cc3333');
-        $group.addClass('has-error');
-        $this.find('.contacts-input-email').focus();
-      } else {
-        $btn.add($this.find('.contacts-input-email')).add($this.find('.contacts-input-phone')).add($this.find('.contacts-input-name')).add($this.find('.contacts-input-message')).add($this.find('.contacts-input-type')).attr('disabled', 'true');
-
-        $group.removeClass('has-error');
-        $.post('/form.php', {email:email, phone:phone, name:name, message:message, user_type:type, type:'json', action: 'contact'}).done(function() {
-          $('.contacts-success-msg').show('slow');
-          $this.find('.contacts-input-email').css('color', '#000');
-        });
-      }
-
-      return false;
-    });
-
-    function validateEmail(email) {
-      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
-    }
-  </script>
+    </script>
   </body>
 </html>
