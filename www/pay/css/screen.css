@@ -38,7 +38,7 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 
 .header { padding-top: 50px; height: 120px; width: 100%; background: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.heder__row { margin: 0 auto; width: 70%; min-width: 564px; }
+.heder__row { margin: 0 auto; width: 70%; min-width: 564px; max-width: 1200px; }
 
 .logo__left { float: left; color: #149ec6; font-size: 26px; text-decoration: none; font-weight: 400; }
 .logo__left span { font-weight: 100; }
@@ -46,7 +46,7 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .logo__right { float: right; position: relative; width: 175px; height: 35px; }
 .logo__right i { position: absolute; top: 0; left: 0; background: url('../img/icons-s85aa126fd5.png') 0 -1436px no-repeat; width: 175px; height: 35px; }
 
-.container { margin: 0 auto; padding: 50px 0 60px 0; width: 70%; min-width: 564px; height: 100%; }
+.container { margin: 0 auto; padding: 50px 0 60px 0; width: 70%; min-width: 564px; max-width: 1200px; height: 100%; }
 
 .payment-info { color: #3b3b3b; }
 .payment-info .h3 { margin-bottom: 25px; }
@@ -83,11 +83,6 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .option__item .pci { background: url('../img/icons-s85aa126fd5.png') 0 -1280px no-repeat; width: 72px; height: 42px; }
 
 .payment__input { position: relative; float: left; width: 500px; z-index: 2; }
-.payment__input .cards__item { position: absolute; content: ""; top: 50%; margin-top: -17px; display: none; }
-.payment__input .cards__item.act { display: block !important; }
-.payment__input .mastercard { left: 245px; background: url('../img/icons-s85aa126fd5.png') 0 -1481px no-repeat; width: 56px; height: 34px; }
-.payment__input .visa { left: 203px; background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
-.payment__input .off { display: none; }
 
 .input__field { position: relative; margin: 10px 0; width: 300px; height: 32px; display: inline-block; }
 .input__field .error__inp { position: absolute; left: -27px; bottom: -31px; padding-left: 10px; width: 355px; height: 35px; color: white; line-height: 33px; z-index: 2; border: solid 1px white; background: #ff4444; transition: all 0.3s linear 0s; display: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -179,6 +174,15 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
   .btn { margin: 0 auto; display: block; }
   .footer { margin-top: 22px; }
   .error__inp { font-size: 14px; } }
+.card { position: absolute; top: 50%; left: 0; margin-top: -17px; left: 150px; width: 150px; }
+.card i { display: inline-block; position: absolute; right: 0; top: 0; }
+.card .mastercard { background: url('../img/icons-s85aa126fd5.png') 0 -1481px no-repeat; width: 56px; height: 34px; }
+.card .visa { background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
+.card .amex { background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
+.card .maestro { background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
+.card .visa_electron { background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
+.card .china_unionpay { background: url('../img/icons-s85aa126fd5.png') 0 -1525px no-repeat; width: 97px; height: 30px; }
+
 .body { width: 400px; height: 468px; padding: 26px 21px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .body .payment__input_mod { padding: 37px 0 0 24px; width: 268px; }
 .body .payment__input_mod:before { top: 12px; left: 268px; margin: 0; }

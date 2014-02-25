@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<meta name="viewport" content="initial-scale=1"/>
+	<meta name="viewport" content="width=640">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -59,7 +59,7 @@
 						<form class="payment__form1" method="post" action="/" name="payment__form1">
 							<h5 class="h5">Код CVV2/CVC2</h5>
 							<div class="input__code">
-								<input class="input" value="" minlength="3" maxlength="4" name="code_cvv2" onkeyup="return proverka_numbers(this);"></input>	
+								<input class="input input_onlynumber" value="" minlength="3" maxlength="4" name="code_cvv2"></input>	
 							<label class="error error__code_cvv2" for="code_cvv2"></label>	
 							</div>
 						</form>
@@ -67,7 +67,7 @@
 				</div>
 				<h5 class="h5">Владелец карты</h5>
 				<div class="input__field">
-					<input class="input input__up" type="text" onkeyup="return proverka(this);"></input>	
+					<input class="input input__up input_latin" type="text"></input>	
 				</div>
 				<h5 class="h5 input__field_text">Латинскими буквами как указано на карте</h5>
 			</div>

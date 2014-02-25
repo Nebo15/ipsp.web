@@ -51,6 +51,10 @@ Mountain View, California, 94041, USA.
         pattern: /^(4026|417500|4508|4844|491(3|7))/,
         valid_length: [16]
       }, {
+        name: 'china_unionpay',
+        pattern: /^(62|88)/,
+        valid_length: [16, 17, 18, 19]
+      }, {
         name: 'visa',
         pattern: /^4/,
         valid_length: [16]
