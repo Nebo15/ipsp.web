@@ -169,11 +169,11 @@ Mountain View, California, 94041, USA.
     normalize = function(number) {
       return number.replace(/[ -]/g, '');
     };
-    this.bind('input', function() {
-      $(this).unbind('keyup');
+    this.bind('input.creditcardvalidator', function() {
+      $(this).unbind('keyup.creditcardvalidator');
       return validate.call(this);
     });
-    this.bind('keyup', function() {
+    this.bind('keyup.creditcardvalidator', function() {
       return validate.call(this);
     });
     if (this.length !== 0) {

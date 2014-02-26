@@ -6,12 +6,12 @@
 	<title>Template</title>
 	<meta name="viewport" content="width=640">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.creditCardValidator.js"></script>
 	<script src="js/jquery.validate.js"></script>
-	<script src="js/jquery.masked.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
 	<script src="js/jquery.selectBox.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -49,18 +49,18 @@
 	</div>
 	<form class="payment__field payment__form">
 		<div class="payment__input">
-			
+
 			<h5 class="h5">Номер карты</h5>
 			<div class="input__field">
-				<input class="input input_onlynumber" id="card_number" type="text" value="" minlength="16" maxlength="18" name="card_number" placeholder=""></input>
-				<label class="error error__inp error__cardnumber" for="card_number"></label>	
+				<input class="input input_onlynumber" id="card_number" type="text" value="" name="card_number" placeholder="" required></input>
+				<label class="error error__inp error__cardnumber" for="card_number"></label>
 			</div>
 
 			<div class="payment__select">
 				<div class="payment__left ">
 					<h5 class="h5">Срок действия</h5>
 					<div class="input__field">
-						<select>
+						<select name="month">
 				            <option value="1">01</option>
 				            <option value="2" class="selectBox-selected">02</option>
 				            <option value="3">03</option>
@@ -76,7 +76,7 @@
 				        </select>
 					</div>
 					<div class="input__field">
-						<select>
+						<select name="year">
 				            <option value="1" class="selectBox-selected">14</option>
 				            <option value="2">15</option>
 				            <option value="3">16</option>
@@ -87,19 +87,19 @@
 					</div>
 				</div>
 				<div class="payment__right payment__form1">
-					
-						<h5 class="h5">Код CVV2/CVC2</h5>
-						<div class="input__code">
-							<input class="input input_onlynumber" value="" minlength="3" maxlength="4" name="code_cvv2"></input>	
-						<label class="error error__code_cvv2" for="code_cvv2"></label>	
-						</div>
-	
+					<h5 class="h5">Код CVV2/CVC2</h5>
+					<div class="input__code">
+						<input class="input input_onlynumber" value="" minlength="3" maxlength="4" name="code_cvv2"required></input>
+    					<label class="error error__code_cvv2" for="code_cvv2"></label>
+					</div>
+
 					<a class="payment__icon_info" href="#"></a>
 				</div>
 			</div>
 			<h5 class="h5">Владелец карты</h5>
 			<div class="input__field">
-				<input class="input input__up input_latin" type="text"></input>	
+				<input class="input input__up input_latin" type="text" name="cardholder" required></input>
+                <label class="error error__cardholder" for="cardholder">sadas</label>
 			</div>
 			<h5 class="h5 input__field_text">Латинскими буквами как указано на карте</h5>
 			<div class="card">
@@ -190,7 +190,7 @@
 <!-- END .container -->
 <!-- BEGIN .footer -->
 <footer class="footer">
-	<p>© 2013–2014 
+	<p>© 2013–2014
 		<a href="#">IPSP.com</a>
 	</p>
 </footer>
