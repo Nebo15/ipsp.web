@@ -6,12 +6,14 @@
 	<title>Template</title>
 	<meta name="viewport" content="width=640">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,900,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.validate.js"></script>
-	<script src="js/jquery.selectBox.js"></script>
-	<script src="js/common.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.creditCardValidator.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.selectBox.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body class="body">
 	<!-- BEGIN .wrapper -->
@@ -21,8 +23,8 @@
 				<form class="payment__form" method="post" action="/" name="payment__form">
 					<h5 class="h5">Номер карты</h5>
 					<div class="input__field">
-						<input class="input" id="card_number" type="text" value="" minlength="19" maxlength="21" name="card_number" placeholder=""></input>
-						<label class="error error__inp" for="card_number"></label>	
+						<input class="input" id="card_number" type="text" value="" name="card_number" placeholder=""></input>
+						<label class="error error__inp" for="card_number"></label>
 					</div>
 				</form>
 				<div class="payment__select">
@@ -59,15 +61,16 @@
 						<form class="payment__form1" method="post" action="/" name="payment__form1">
 							<h5 class="h5">Код CVV2/CVC2</h5>
 							<div class="input__code">
-								<input class="input input_onlynumber" value="" minlength="3" maxlength="4" name="code_cvv2"></input>	
-							<label class="error error__code_cvv2" for="code_cvv2"></label>	
+								<input class="input input_onlynumber" value="" minlength="3" maxlength="4" name="code_cvv2"></input>
+							<label class="error error__code_cvv2" for="code_cvv2"></label>
 							</div>
 						</form>
 					</div>
 				</div>
 				<h5 class="h5">Владелец карты</h5>
 				<div class="input__field">
-					<input class="input input__up input_latin" type="text"></input>	
+					<input class="input input__up input_latin" type="text"></input>
+                    <label class="error error__cardholder" for="cardholder"></label>
 				</div>
 				<h5 class="h5 input__field_text">Латинскими буквами как указано на карте</h5>
 			</div>

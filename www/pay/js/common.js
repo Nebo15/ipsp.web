@@ -147,6 +147,14 @@ $(document).ready(function() {
                         rangelength_stripped: [result.card_type.valid_length[0], max_length]
                     });
 
+                    if(result.card_type.name == "china_unionpay") {
+                    	$this.rules('remove', "creditcard_stripped");
+                    } else {
+                    	$this.rules('add', {
+	                        creditcard_stripped: true
+	                    });
+                    }
+
                     // Here we can change mask dynamically
                 }
             });

@@ -44,7 +44,7 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .logo__left span { font-weight: 100; }
 
 .logo__right { float: right; position: relative; width: 175px; height: 35px; }
-.logo__right i { position: absolute; top: 0; left: 0; background: url('../img/icons-s3bc1e815bc.png') 0 -1636px no-repeat; width: 175px; height: 35px; }
+.logo__right i { position: absolute; top: 0; left: 0; background: url('../img/icons-sefde1624ae.png') 0 -1636px no-repeat; width: 175px; height: 35px; }
 
 .container { margin: 0 auto; padding: 50px 0 60px 0; width: 70%; min-width: 564px; max-width: 1000px; height: 100%; }
 
@@ -69,18 +69,18 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .payment-info__right .text_blue { font-weight: 300; font-size: 20px; text-transform: lowercase; }
 
 .payment__field { position: relative; float: left; padding: 30px 0 0 50px; margin: 30px 0; height: 295px; width: 100%; color: #343434; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.payment__field:before { position: absolute; content: ""; top: 0; left: 0; z-index: -1; background: url('../img/icons-s3bc1e815bc.png') 0 -620px no-repeat; width: 403px; height: 303px; }
-.payment__field:after { position: absolute; content: ""; top: 22px; left: 207px; z-index: -2; background: url('../img/icons-s3bc1e815bc.png') 0 0 no-repeat; width: 434px; height: 298px; }
+.payment__field:before { position: absolute; content: ""; top: 0; left: 0; z-index: -1; background: url('../img/icons-sefde1624ae.png') 0 -670px no-repeat; width: 403px; height: 303px; }
+.payment__field:after { position: absolute; content: ""; top: 22px; left: 207px; z-index: -2; background: url('../img/icons-sefde1624ae.png') 0 -50px no-repeat; width: 434px; height: 298px; }
 
 .option-paying { float: right; margin-top: -8px; width: 72px; }
 
 .option__item { position: relative; margin-bottom: 15px; width: 72px; height: 42px; cursor: pointer; display: block; }
 .option__item i { position: absolute; content: ""; top: 0; left: 0; }
-.option__item .visa { background: url('../img/icons-s3bc1e815bc.png') 0 -1765px no-repeat; width: 72px; height: 42px; }
-.option__item .mc { background: url('../img/icons-s3bc1e815bc.png') 0 -1428px no-repeat; width: 72px; height: 42px; }
-.option__item .vbv { background: url('../img/icons-s3bc1e815bc.png') 0 -1584px no-repeat; width: 72px; height: 42px; }
-.option__item .mcsc { background: url('../img/icons-s3bc1e815bc.png') 0 -1532px no-repeat; width: 72px; height: 42px; }
-.option__item .pci { background: url('../img/icons-s3bc1e815bc.png') 0 -1480px no-repeat; width: 72px; height: 42px; }
+.option__item .visa { background: url('../img/icons-sefde1624ae.png') 0 -1765px no-repeat; width: 72px; height: 42px; }
+.option__item .mc { background: url('../img/icons-sefde1624ae.png') 0 -1428px no-repeat; width: 72px; height: 42px; }
+.option__item .vbv { background: url('../img/icons-sefde1624ae.png') 0 -1584px no-repeat; width: 72px; height: 42px; }
+.option__item .mcsc { background: url('../img/icons-sefde1624ae.png') 0 -1532px no-repeat; width: 72px; height: 42px; }
+.option__item .pci { background: url('../img/icons-sefde1624ae.png') 0 -1480px no-repeat; width: 72px; height: 42px; }
 
 .payment__input { position: relative; float: left; width: 500px; z-index: 2; }
 
@@ -130,8 +130,8 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 
 .payment__right { position: relative; float: right; width: 105px; text-align: right; display: inline-block; }
 .payment__right .input { margin-top: 10px; }
-.payment__right .payment__icon_info { position: absolute; content: ""; bottom: 6px; right: -32px; background: url('../img/icons-s3bc1e815bc.png') 0 -1889px no-repeat; width: 21px; height: 21px; }
-.payment__right:after { position: absolute; content: ""; bottom: 5px; right: 7px; background: url('../img/icons-s3bc1e815bc.png') 0 -1988px no-repeat; width: 36px; height: 23px; }
+.payment__right .payment__icon_info { position: absolute; content: ""; bottom: 6px; right: -32px; background: url('../img/icons-sefde1624ae.png') 0 -1889px no-repeat; width: 21px; height: 21px; }
+.payment__right:after { position: absolute; content: ""; bottom: 5px; right: 7px; background: url('../img/icons-sefde1624ae.png') 0 -1988px no-repeat; width: 36px; height: 23px; }
 
 .input__field_text { font-size: 10px; }
 
@@ -142,10 +142,10 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .payment-info__row_pad { vertical-align: inherit; padding-top: 20px; }
 
 .text__info { position: relative; margin: 30px 0; padding-left: 30px; color: #5b5b5b; font-size: 10px; text-transform: uppercase; }
-.text__info:before { position: absolute; content: ""; top: -2px; left: 0; background: url('../img/icons-s3bc1e815bc.png') 0 -1920px no-repeat; width: 20px; height: 25px; }
+.text__info:before { position: absolute; content: ""; top: -2px; left: 0; background: url('../img/icons-sefde1624ae.png') 0 -1920px no-repeat; width: 20px; height: 25px; }
 
 .clock { position: relative; }
-.clock:before { position: absolute; content: ""; left: 22px; top: 0; display: none; background: url('../img/icons-s3bc1e815bc.png') 0 -1847px no-repeat; width: 32px; height: 32px; }
+.clock:before { position: absolute; content: ""; left: 22px; top: 0; display: none; background: url('../img/icons-sefde1624ae.png') 0 -1847px no-repeat; width: 32px; height: 32px; }
 
 .btn { width: 180px; height: 56px; color: white; line-height: 56px; font-size: 20px; text-align: center; text-decoration: none; text-transform: uppercase; display: inline-block; background: #4dc687; -webkit-box-shadow: inset 0 -3px 0 #238955; -moz-box-shadow: inset 0 -3px 0 #238955; box-shadow: inset 0 -3px 0 #238955; -webkit-transition: 0.6s; -moz-transition: 0.6s; -o-transition: 0.6s; transition: 0.6s; }
 .btn:hover { background: #29ae6b; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-transition: 0.6s; -moz-transition: 0.6s; -o-transition: 0.6s; transition: 0.6s; }
@@ -178,12 +178,12 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
   .error__inp { font-size: 14px; } }
 .card { position: absolute; top: 50%; left: 0; margin-top: -17px; left: 150px; width: 150px; }
 .card i { display: inline-block; position: absolute; right: 0; top: 0; }
-.card .mastercard { background: url('../img/icons-s3bc1e815bc.png') 0 -1681px no-repeat; width: 56px; height: 34px; }
-.card .visa { background: url('../img/icons-s3bc1e815bc.png') 0 -1725px no-repeat; width: 97px; height: 30px; }
-.card .amex { background: url('../img/icons-s3bc1e815bc.png') 0 -1378px no-repeat; width: 41px; height: 40px; }
-.card .maestro { background: url('../img/icons-s3bc1e815bc.png') 0 -1278px no-repeat; width: 67px; height: 40px; }
-.card .visa_electron { background: url('../img/icons-s3bc1e815bc.png') 0 -1328px no-repeat; width: 64px; height: 40px; }
-.card .china_unionpay { background: url('../img/icons-s3bc1e815bc.png') 0 -1228px no-repeat; width: 63px; height: 40px; }
+.card .mastercard { background: url('../img/icons-sefde1624ae.png') 0 -1681px no-repeat; width: 56px; height: 34px; }
+.card .visa { background: url('../img/icons-sefde1624ae.png') 0 -1725px no-repeat; width: 97px; height: 30px; }
+.card .amex { background: url('../img/icons-sefde1624ae.png') 0 -1328px no-repeat; width: 70px; height: 40px; }
+.card .maestro { background: url('../img/icons-sefde1624ae.png') 0 -1378px no-repeat; width: 70px; height: 40px; }
+.card .visa_electron { background: url('../img/icons-sefde1624ae.png') 0 -1278px no-repeat; width: 70px; height: 40px; }
+.card .china_unionpay { background: url('../img/icons-sefde1624ae.png') 0 0 no-repeat; width: 70px; height: 40px; }
 
 .body { width: 400px; height: 468px; padding: 26px 21px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .body .payment__input_mod { padding: 37px 0 0 24px; width: 268px; }
@@ -192,4 +192,4 @@ body { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 500; bac
 .body .text__info { margin: 25px 0 16px 0; font-size: 10px !important; width: 268px; }
 
 .payment__card { position: relative; width: 358px; height: 284px; color: #343434; }
-.payment__card:before { position: absolute; content: ""; top: 0; left: 0; z-index: -1; background: url('../img/icons-s3bc1e815bc.png') 0 -933px no-repeat; width: 359px; height: 285px; }
+.payment__card:before { position: absolute; content: ""; top: 0; left: 0; z-index: -1; background: url('../img/icons-sefde1624ae.png') 0 -983px no-repeat; width: 359px; height: 285px; }
