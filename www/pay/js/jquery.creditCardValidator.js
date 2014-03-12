@@ -43,13 +43,13 @@ Mountain View, California, 94041, USA.
         pattern: /^4/,
         valid_length: [13,16]
       }, {
-        name: 'mastercard',
-        pattern: /^5[0-5]/,
-        valid_length: [16]
-      }, {
         name: 'maestro',
         pattern: /^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)/,
         valid_length: [12, 13, 14, 15, 16, 17, 18, 19]
+      }, {
+        name: 'mastercard',
+        pattern: /^5[0-5]/,
+        valid_length: [16]
       }, {
         name: 'discover',
         pattern: /^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)/,
