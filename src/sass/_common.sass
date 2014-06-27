@@ -1,0 +1,912 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+//          +s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+//      +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//     horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//          @extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//          display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//          width: 2em * $i;
+//     @each $s in a,b,c
+//          #{$s}
+//              display: none
+// ## fonts
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)
+// =book
+//  font-family: "book",arial,sans-serif
++font(loveloblack, lovelo_black-webfont)
+=loveloblack
+    font-family: "loveloblack",arial,sans-serif
+=justify
+    text-align: justify
+    line-height: 0
+    font-size: 1px
+    text-justify: newspaper
+    zoom: 1
+    text-align-last: justify
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
+        height: 0px
+        visibility: hidden
+        overflow: hidden
+=justify-child
+    display: inline-block
+    line-height: normal
+    vertical-align: top
+    font-size: 12px
+
+body
+    font-size: 12px
+    font-family: 'Myriad Pro', sans-serif
+    line-height: 1.4
+.out
+    overflow: hidden
+.container
+    width: 960px
+    margin: 0 auto
+    padding: 0 30px
+    +r(w1024)
+        width: auto
+        padding: 0 20px
+    +r(w480)
+        padding: 0 10px
+.h1
+    font-size: 60px
+    +loveloblack
+    text-align: center
+    color: #fff
+    +r(w768)
+        font-size: 45px
+    +r(w568)
+        font-size: 35px
+    +r(w480)
+        font-size: 26px
+.h2
+    font-size: 45px
+    +loveloblack
+    text-align: center
+    color: #fff
+    &.h2_dark
+        color: #4c4c4d
+    +r(w568)
+        font-size: 35px
+.h3
+    font-size: 28px
+    +loveloblack
+    text-align: center
+    color: #fff
+    &.h3_dark
+        color: #4c4c4d
+    &.h3_smaller
+        font-size: 20px
+
+// common blocks
+.header-wrap
+    height: 122px
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 122px
+    background: #fff
+    z-index: 999
+    +transition(opacity 250ms)
+    +gpu
+    &:hover
+        +opacity(1)
+    &.is-hidden
+        +opacity(0)
+    &__tr
+        position: absolute
+        bottom: -37px
+        left: 0
+        right: 0
+        height: 37px
+        img
+            width: 100%
+            height: 100%
+    &__topper
+        position: relative
+        +clr
+        padding-top: 20px
+        +r(w480)
+            padding-top: 10px
+.logo
+    position: absolute
+    top: 43px
+    left: 50%
+    margin-left: -87px
+    //+s(logo)
+    // +svg(logo, 172, 78)
+    z-index: 2
+    .logo-img
+        width: 173px
+        height: 78px
+.lang
+    float: left
+    +r(w1024)
+        float: right
+    &__list
+        +clr
+        li
+            float: left
+            margin-right: 10px
+            +r(w480)
+                margin-right: 5px
+            a
+                display: block
+                &.en
+                    +svg(en, 28, 28)
+                    &.is-active
+                        +svg(en-active, 28, 28)
+                &.ru
+                    +svg(ru, 28, 28)
+                    &.is-active
+                        +svg(ru-active, 28, 28)
+.user
+    float: right
+    +r(w1024)
+        margin-left: 10px
+    +r(w480)
+        margin-left: 5px
+    a
+        display: block
+        +svg(user, 28, 28)
+.menu
+    position: relative
+    &__btn
+        display: none
+        position: absolute
+        top: -6px
+        left: 20px
+        +s(menu)
+        cursor: pointer
+        z-index: 2
+        &.is-active
+            +s(menu-active)
+        +r(w480)
+            top: -27px
+            left: 10px
+    &__list
+        position: relative
+        text-align: center
+        margin: 0 -13px
+        padding-top: 20px
+        z-index: 1
+        +r(w1024)
+            display: none
+            text-align: left
+            padding-top: 100px
+            padding-bottom: 20px
+            width: 192px
+            position: relative
+            top: -48px
+            left: -7px
+            &.is-open
+                background: #00b0b1
+                .menu__item
+                    a
+                        color: #fff
+                        &:hover
+                            color: #90d7ed
+        +r(w480)
+            padding-top: 80px
+    &__item
+        display: inline-block
+        vertical-align: middle
+        margin: 0 13px
+        +r(w1024)
+            display: block
+            margin: 0 0 20px 40px
+        +r(w480)
+            margin: 0 0 10px 30px
+        a
+            font-size: 18px
+            color: #555556
+            text-transform: uppercase
+            +loveloblack
+            text-decoration: none
+            +transition(color 200ms)
+            &:hover
+                color: #00b0b1
+    &__logo
+        width: 174px
+
+// slider
+.slider-wrap
+    position: relative
+    max-height: 578px
+    overflow: hidden
+.slider
+    position: relative
+    &__item
+        position: relative
+        width: 100%
+        min-height: 300px
+    &__bg
+        height: 100%
+        font-size: 0
+        img
+            width: 100%
+            height: auto
+            min-height: 300px
+    &__inner
+        position: absolute
+        top: 0
+        left: 50%
+        width: 960px
+        text-align: center
+        padding-top: 250px
+        margin-left: -480px
+        +r(w1024)
+            padding-top: 180px
+        +r(w900)
+            padding-top: 100px
+        +r(w768)
+            padding-top: 65px
+        .h1
+            margin-bottom: 45px
+            +gpu
+            +r(w768)
+                margin-bottom: 10px
+        p
+            text-align: center
+            color: #fff
+            font-size: 16px
+            +r(w568)
+                font-size: 13px
+.cycle-pager
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -24px
+    text-align: center
+    z-index: 101
+    span
+        display: inline-block
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: #fff
+        margin: 0 2px
+        font-size: 0
+        &.cycle-pager-active
+            background: #b9b5b5
+.join
+    display: inline-block
+    width: 242px
+    height: 49px
+    line-height: 49px
+    margin-bottom: 40px
+    border: 2px solid #fff
+    text-align: center
+    +loveloblack
+    font-size: 28px
+    color: #fff
+    text-transform: uppercase
+    text-decoration: none
+    &:hover
+        background: url(../img/svg/join.svg) 0 -3px no-repeat
+        font-size: 0
+    +r(w480)
+        margin-bottom: 35px
+
+// services
+.services
+    background: #f5f5f5
+    padding: 10px 0 40px
+    .h2
+        margin-bottom: 15px
+    &__list
+        +justify
+        +r(w900)
+            padding: 0 10%
+        +r(w768)
+            padding: 0
+        +r(w480)
+            text-align: center
+    &__item
+        position: relative
+        +justify-child
+        width: 225px
+        height: 386px
+        background: #FFF
+        +r(w1024)
+            width: 200px
+        +r(w900)
+            width: 255px
+            margin-bottom: 24px
+        +r(w600)
+            width: 240px
+            margin-bottom: 20px
+        +r(w568)
+            width: 200px
+        +r(w480)
+            width: 80%
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            +arr(20, 25, #f5f5f5, tr)
+        &:after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            +arr(40, 50, #f5f5f5, bl)
+    &__title
+        height: 115px
+        padding: 14px
+        +box
+        background: #4bc4cf
+        text-align: left
+        line-height: 1.1
+        +loveloblack
+        color: #fff
+        text-transform: uppercase
+        font-size: 0px
+        &:before
+            content: ""
+            display: inline-block
+            width: 0
+            height: 100%
+            vertical-align: middle
+        span
+            display: inline-block
+            vertical-align: middle
+            font-size: 28px
+            +r(w1024)
+                font-size: 24px
+    &__content
+        padding: 12px
+        font-size: 16px
+        color: #4c4c4d
+        text-align: left
+        line-height: 1.4
+
+// features
+.features
+    padding: 10px 0 40px
+    background: url(../img/features.jpg)
+    +cover
+    &__inner
+        position: relative
+        +clr
+    &__text
+        float: left
+        width: 45%
+        padding-right: 5%
+        padding-top: 50px
+        .h3
+            margin-bottom: 25px
+            text-align: left
+        p
+            margin-bottom: 25px
+            color: #fff
+            font-size: 16px
+        +r(w568)
+            width: 50%
+            .h3
+                text-align: left
+        +r(w480)
+            width: 100%
+    &__img
+        float: right
+        padding-right: 90px
+        font-size: 0
+        +r(w900)
+            width: 50%
+            padding-right: 0
+        +r(w568)
+            width: 45%
+            padding-top: 50px
+            img
+                width: 100%
+        +r(w480)
+            float: none
+            width: 60%
+            margin: 0 auto
+            padding-top: 10px
+
+// rebill
+.rebill
+    padding: 45px 0
+    background: url(../img/rebill.jpg)
+    +cover
+    &__inner
+        position: relative
+        +clr
+    &__text
+        float: right
+        width: 45%
+        .h3
+            margin-bottom: 15px
+            text-align: left
+            +r(w568)
+                text-align: left
+        p
+            margin-bottom: 15px
+            color: #fff
+            font-size: 16px
+        +r(w900)
+            width: 100%
+    &__img
+        font-size: 0
+        +r(w900)
+            width: 100%
+            img
+                max-width: 100%
+
+// payout
+.payout
+    padding: 167px 0 30px
+    background: url(../img/cards.jpg)
+    overflow: hidden
+    +cover
+    +r(w900)
+        padding: 40px 0 30px
+    &__inner
+        +clr
+    &__text
+        float: left
+        width: 45%
+        .h3
+            margin-bottom: 15px
+            text-align: left
+            +r(w568)
+                text-align: left
+        p
+            margin-bottom: 15px
+            color: #fff
+            font-size: 16px
+        +r(w900)
+            width: 100%
+    &__img
+        position: relative
+        float: left
+        width: 55%
+        font-size: 0
+        img
+            position: relative
+            left: -75px
+            top: -20px
+        +r(w900)
+            width: 100%
+            text-align: center
+            img
+                max-width: 100%
+                top: 0
+                left: auto
+
+// apply
+.apply
+    padding: 35px 0 40px
+    background: #f5f5f5
+    .h3
+        margin-bottom: 20px
+    &__join
+        text-align: center
+        input, button
+            display: inline-block
+            vertical-align: middle
+    &__input
+        width: 407px
+        height: 53px
+        border: 1px solid #5d9cae
+        margin-right: 3px
+        background: #fff
+        padding: 0 10px
+        font-family: 'Myriad Pro', sans-serif
+        font-size: 18px
+        color: #4c4c4d
+        +r(w768)
+            width: 390px
+        +r(w600)
+            margin-bottom: 15px
+        +r(w480)
+            width: 100%
+            +box
+.btn
+    width: 125px
+    height: 55px
+    border: 1px solid #5d9cae
+    background: #4ec0b4
+    +loveloblack
+    font-size: 28px
+    color: #fff
+    +transition(background 200ms)
+    &:hover
+        background: darken(#4ec0b4, 5%)
+
+// clients
+.clients
+    padding: 40px 0 0px
+    .h2
+        text-align: left
+        margin-bottom: 60px
+        +r(w900)
+            text-align: center
+    &__list
+        font-size: 0
+    &__item
+        display: inline-block
+        vertical-align: top
+        width: 50%
+        +clr
+        margin-bottom: 50px
+        +r(w768)
+            width: 100%
+    &__img
+        position: relative
+        float: left
+        width: 135px
+        height: 115px
+        padding-top: 5px
+        overflow: hidden
+        &:before
+            content: ""
+            position: absolute
+            top: 0px
+            right: 0px
+            +arr(15, 15, #fff, br)
+        &:after
+            content: ""
+            position: absolute
+            top: 15px
+            right: 0
+            width: 15px
+            bottom: 0
+            background: #fff
+        img
+            width: 100%
+            min-height: 100%
+    &__info
+        float: left
+        width: 330px
+        padding-left: 5px
+        padding-right: 10px
+        font-size: 16px
+        color: #4c4c4d
+        p
+            margin-bottom: 25px
+        +r(w1024)
+            width: 260px
+            p
+                margin-bottom: 10px
+        +r(w900)
+            width: 200px
+        +r(w768)
+            width: auto
+            float: none
+    &__name
+        color: #fa5757
+
+// team
+.team
+    padding: 25px 0 50px
+    background: #4ec4cb
+    +background-image(linear-gradient(left, #5ac8d8 0%, #38bcb2 100%))
+    .h2
+        margin-bottom: 30px
+    &__list
+        +justify
+        +r(w900)
+            padding: 0 5%
+        +r(w600)
+            padding: 0
+        +r(w480)
+            text-align: center
+    &__item
+        +justify-child
+        color: #fff
+        +r(w900)
+            margin-bottom: 45px
+    &__img
+        position: relative
+        width: 215px
+        height: 164px
+        margin-bottom: 15px
+        overflow: hidden
+        +r(w1024)
+            width: 200px
+        +r(w900)
+            width: 240px
+        +r(w600)
+            width: 218px
+        +r(w568)
+            width: 200px
+        +r(w480)
+            width: 240px
+        &:before
+            content: ""
+            position: absolute
+            top: 3px
+            left: 3px
+            right: 3px
+            bottom: 3px
+            border: 2px solid #4bc3c7
+        img
+            display: block
+            width: 100%
+            height: auto
+    &__name
+        font-size: 20px
+    &__post
+        font-size: 16px
+
+// foragents
+.foragents
+    padding: 45px 0 50px
+    background: url(../img/foragents.jpg)
+    +cover
+    .h2
+        margin-bottom: 10px
+    &__subtitle
+        max-width: 580px
+        margin: 0 auto 28px
+        font-size: 16px
+        text-align: center
+        color: #fff
+    &__list
+        +justify
+        +r(w900)
+            padding: 0 10%
+        +r(w768)
+            padding: 0 2%
+        +r(w600)
+            padding: 0
+    &__item
+        +justify-child
+        width: 210px
+        +r(w1024)
+            width: 200px
+        +r(w900)
+            width: 250px
+            margin-bottom: 30px
+        +r(w568)
+            width: auto
+    &__img
+        text-align: center
+        margin-bottom: 15px
+        img
+            width: 62px
+            height: 62px
+            &.applynow
+                width: 64px
+            &.agent
+                height: 64px
+    .h3
+        text-align: left
+        margin-bottom: 10px
+        +r(w568)
+            text-align: center
+    &__text
+        text-align: left
+        line-height: 1.3
+        color: #fff
+        font-size: 16px
+        a
+            color: #fa5757
+            font-weight: bold
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+
+// faq
+.faq
+    padding: 30px 0
+    .h2
+        text-align: left
+        margin-bottom: 20px
+        +r(w900)
+            text-align: center
+    &__list
+        font-size: 0
+        margin-left: -5%
+        +r(w568)
+            margin-left: 0
+    &__item
+        display: inline-block
+        vertical-align: top
+        width: 45%
+        margin-left: 5%
+        font-size: 16px
+        +r(w568)
+            width: auto
+            margin-left: 0
+        article
+            color: #5a5a5b
+            p
+                margin-bottom: 25px
+            ul
+                margin-bottom: 25px
+                li
+                    position: relative
+                    padding-left: 8px
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 10px
+                        left: 0
+                        width: 4px
+                        height: 4px
+                        border-radius: 50%
+                        background: #5a5a5b
+    &__title
+        font-weight: bold
+        font-size: 20px
+        color: #fa5757
+        margin-bottom: 15px
+
+// feedback
+.feedback
+    padding: 40px 0
+    background: #f5f5f5
+    .h3
+        text-align: left
+        margin-bottom: 30px
+        +r(w900)
+            text-align: center
+.form
+    +clr
+    width: 828px
+    margin: 0 auto
+    +r(w900)
+        width: auto
+    &__col
+        float: left
+        width: 409px
+        margin-left: 10px
+        &:first-child
+            margin-left: 0
+        +r(w900)
+            float: none
+            margin: 0 auto
+            &:first-child
+                margin: 0 auto
+        .btn
+            float: right
+            +r(w900)
+                float: none
+                display: block
+                margin: 0 auto
+        +r(w480)
+            width: 100%
+.input
+    width: 381px
+    height: 43px
+    margin-bottom: 10px
+    border: 1px solid #d5d5d5
+    background: #fff
+    padding: 0 13px
+    font-family: 'Myriad Pro', sans-serif
+    font-size: 16px
+    color: #4c4c4d
+    +placeholder
+        font-family: 'Myriad Pro', sans-serif
+        font-size: 16px
+        color: #5a5a5b
+    +r(w480)
+        width: 100%
+        +box
+.textarea
+    display: block
+    resize: none
+    width: 381px
+    height: 72px
+    padding: 13px
+    margin-bottom: 10px
+    border: 1px solid #d5d5d5
+    font-family: 'Myriad Pro', sans-serif
+    font-size: 16px
+    color: #4c4c4d
+    +placeholder
+        font-family: 'Myriad Pro', sans-serif
+        font-size: 16px
+        color: #5a5a5b
+    +r(w480)
+        width: 100%
+        +box
+.select
+    position: relative
+    &__text
+        position: relative
+        height: 43px
+        line-height: 43px
+        +text-overflow
+        margin-bottom: 10px
+        border: 1px solid #d5d5d5
+        background: #fff
+        padding: 0 36px 0 13px
+        font-size: 16px
+        color: #5a5a5b
+        cursor: pointer
+        &:before
+            content: ""
+            position: absolute
+            top: 19px
+            right: 14px
+            +s(arr-down)
+    &__dropdown
+        position: absolute
+        top: 43px
+        left: 0
+        right: 0
+        background: #fff
+        border: 1px solid #d5d5d5
+        border-top: none
+        z-index: 9
+        li
+            height: 43px
+            line-height: 43px
+            +text-overflow
+            padding: 0 13px
+            &:hover
+                background: #d5d5d5
+            a
+                display: block
+                font-size: 16px
+                text-decoration: none
+                color: #5a5a5b
+.success-msg
+    margin-top: 10px
+    .h3_smaller
+        margin-bottom: 0
+
+// contacts
+.contacts
+    padding: 30px 0
+    background: #3eafc1
+    +background-image(linear-gradient(left, #48b3cd 0%, #27a8a8 100%))
+    .h2
+        margin-bottom: 30px
+    &__inner
+        +clr
+        font-size: 16px
+        color: #fff
+    &__left
+        float: left
+        width: 50%
+        +r(w768)
+            width: 45%
+    &__right
+        float: right
+        width: 280px
+        +r(w768)
+            width: 45%
+    &__item
+        margin-bottom: 30px
+.copyrights
+    clear: both
+    text-align: center
+    font-size: 16px
+    color: #fff
