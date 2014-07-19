@@ -98,7 +98,27 @@ head.ready(function() {
     var $lang = $header__topper.find('.lang');
     var $moving_parts = $user.add($lang);
 
+    function setCSSIfNotEqal($element, properties) {
+        for (var property in properties) {
+            if(properties.hasOwnProperty(property)) {
+                console.log(property);
+                if(parseInt($element.css(property), 10) != properties[property]) {
+                    $element.css(property, properties[property]);
+                }
+            }
+        }
+        // $element.css(properties);
+    }
+
+    var menu_min_position;
+
 	function menu_hide(){
+        if($(document).width() > 1024) {
+            menu_min_position = -50;
+        } else {
+            menu_min_position = -30;
+        }
+
 		if($(window).scrollTop() > 122){
             // Container height
             var header_height = 122 - $(window).scrollTop() + 122;
@@ -108,19 +128,26 @@ head.ready(function() {
                 header_height = 50;
             }
             $header.css({
-                height: header_height
+                height: header_height,
             });
+            // setCSSIfNotEqal($header, {
+            //     height: header_height,
+            // });
 
             // Lang and User
+            var moving_parts_position = 122 - $(window).scrollTop();
+            if(moving_parts_position < -50) {
+                moving_parts_position = -50;
+            }
             $moving_parts.css({
                 position: "relative",
-                top: 122 - $(window).scrollTop()
+                top: moving_parts_position,
             });
 
             // Menu
             var menu_position = 122 - $(window).scrollTop();
-            if(menu_position < -50) {
-                menu_position = -50;
+            if(menu_position < menu_min_position) {
+                menu_position = menu_min_position;
             }
             $menu.css({
                 position: "relative",
@@ -272,9 +299,7 @@ head.ready(function() {
 
     // Catch resizes
 	$(window).scroll(function(){
-        setTimeout(function() {
-        	menu_hide();
-        }, 1);
+    	menu_hide();
     });
 
 	$(window).resize(function(){

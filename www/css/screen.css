@@ -43,7 +43,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 
 .header-wrap { height: 122px; }
 
-.header { position: fixed; top: 0; left: 0; right: 0; height: 122px; background: white; z-index: 999; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.header { position: fixed; top: 0; left: 0; right: 0; height: 122px; background: white; z-index: 999; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms;  }
 .header:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .header.is-hidden { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 .header__tr { position: absolute; bottom: -37px; left: 0; right: 0; height: 37px; }
@@ -52,7 +52,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .header__topper:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 480px) { .header__topper { padding-top: 10px; } }
 
-.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; }
+.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; -moz-transition: margin 30ms; -o-transition: margin 30ms; -webkit-transition: margin 30ms; transition: margin 30mss; }
 .logo .logo-img { width: 173px; height: 78px; }
 
 .lang { float: left; }
