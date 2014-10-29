@@ -309,7 +309,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .contacts__inner:after { content: " "; display: table; clear: both; }
 .contacts__left { float: left; width: 50%; }
 @media only screen and (max-width: 768px) { .contacts__left { width: 45%; } }
-.contacts__right { float: right; width: 280px; }
+.contacts__right { float: right; width: 290px; }
 @media only screen and (max-width: 768px) { .contacts__right { width: 45%; } }
 .contacts__item { margin-bottom: 30px; }
 
