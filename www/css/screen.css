@@ -57,6 +57,9 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 /*.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; -moz-transition: margin 30ms; -o-transition: margin 30ms; -webkit-transition: margin 30ms; transition: margin 30mss; }*/
 /*.logo {z-index: 2;}*/
 .logo-img { width: 173px; height: 78px; position: relative; top: 0;}
+.mobile-logo .logo-img {z-index: 2; transform: scale(.8); left: 50%; margin-left: -87px; position: absolute;}
+@media only screen and (max-width: 1023px) { .menu__logo { display: none !important; } }
+@media only screen and (min-width: 1024px) { .mobile-logo .logo-img { display: none !important; } }
 
 .lang { float: left; }
 @media only screen and (max-width: 1024px) { .lang { float: right; } }

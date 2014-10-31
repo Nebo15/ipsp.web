@@ -169,8 +169,7 @@ head.ready(function() {
             });
 
             // Menu logo
-            var logo_position = $(window).scrollTop() - 122; //+ $(window).scrollTop()
-            console.log(logo_position);
+            var logo_position = $(window).scrollTop() - 122;
             if(logo_position <= 0) {
                 logo_position = 0;
             } else if (logo_position > 18) {
