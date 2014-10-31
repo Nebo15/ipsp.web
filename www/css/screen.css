@@ -52,8 +52,14 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .header__topper:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 480px) { .header__topper { padding-top: 10px; } }
 
-.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; -moz-transition: margin 30ms; -o-transition: margin 30ms; -webkit-transition: margin 30ms; transition: margin 30mss; }
-.logo .logo-img { width: 173px; height: 78px; }
+
+.logo-box {
+
+}
+/*.logo {position: relative;}*/
+/*.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; -moz-transition: margin 30ms; -o-transition: margin 30ms; -webkit-transition: margin 30ms; transition: margin 30mss; }*/
+/*.logo {z-index: 2;}*/
+.logo-img { width: 173px; height: 78px; position: relative; top: 0;}
 
 .lang { float: left; }
 @media only screen and (max-width: 1024px) { .lang { float: right; } }
@@ -76,7 +82,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .menu__btn { display: none; position: absolute; top: -6px; left: 20px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAbCAYAAABr/T8RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NjA5NDAyM0U3RjExMUUzQTYyNzg3NTA5MDMxREJBRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NjA5NDAyNEU3RjExMUUzQTYyNzg3NTA5MDMxREJBRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk2MDk0MDIxRTdGMTExRTNBNjI3ODc1MDkwMzFEQkFEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk2MDk0MDIyRTdGMTExRTNBNjI3ODc1MDkwMzFEQkFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Do7BmQAAADxJREFUeNpiZNiw8T/DAAAmhgECA2YxCxAzjgb1qMW0Slyj+Xg0H49aPJqPR4N6NB+PWjyaj0eIxQABBgCQbwWivgViFAAAAABJRU5ErkJggg=='); width: 30px; height: 27px; cursor: pointer; z-index: 2; }
 .menu__btn.is-active { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAbCAYAAABr/T8RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMDY4NDc3M0U3RjExMUUzQTZBRUY5REU3OURFQzcwMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMDY4NDc3NEU3RjExMUUzQTZBRUY5REU3OURFQzcwMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEwNjg0NzcxRTdGMTExRTNBNkFFRjlERTc5REVDNzAyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEwNjg0NzcyRTdGMTExRTNBNkFFRjlERTc5REVDNzAyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+k/ZhngAAADBJREFUeNrs07EBAAAEwDD+Pxo/GAzSBzI1a4qD8iUcYLCdfAwG28nHYB+DV7UAAwAQxFy/QFsQ1AAAAABJRU5ErkJggg=='); width: 30px; height: 27px; }
 @media only screen and (max-width: 480px) { .menu__btn { top: -27px; left: 10px; } }
-.menu__list { position: relative; text-align: center; margin: 0 -13px; padding-top: 20px; z-index: 1; }
+.menu__list { position: relative; text-align: center; margin: 0 -13px; z-index: 1; top:-10px; }
 @media only screen and (max-width: 1024px) { .menu__list { display: none; text-align: left; padding-top: 100px; padding-bottom: 20px; width: 192px; position: relative; top: -48px; left: -7px; }
   .menu__list.is-open { background: #00b0b1; }
   .menu__list.is-open .menu__item a { color: white; }

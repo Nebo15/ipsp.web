@@ -169,13 +169,15 @@ head.ready(function() {
             });
 
             // Menu logo
-            var logo_position = 122 - $(window).scrollTop() + 43;
-            if(logo_position <= 10) {
-                logo_position = 10;
+            var logo_position = $(window).scrollTop() - 122; //+ $(window).scrollTop()
+            console.log(logo_position);
+            if(logo_position <= 0) {
+                logo_position = 0;
+            } else if (logo_position > 18) {
+                logo_position = 18;
             }
-            $logo.css({
+            $logo_img.css({
                 top: logo_position,
-                'margin-left': -1 * (logo_img_width  + 2) / 2,
             });
 
             // Opacity
@@ -195,11 +197,8 @@ head.ready(function() {
                 position: "relative",
                 top: 0,
             });
-            $logo.css({
-                top: 43,
-                'margin-left': -87,
-            });
             $logo_img.css({
+                top: 0,
                 width: 173,
                 height: 78,
             });
