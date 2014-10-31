@@ -53,9 +53,6 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 @media only screen and (max-width: 480px) { .header__topper { padding-top: 10px; } }
 
 
-.logo-box {
-
-}
 /*.logo {position: relative;}*/
 /*.logo { position: absolute; top: 43px; left: 50%; margin-left: -87px; z-index: 2; -moz-transition: margin 30ms; -o-transition: margin 30ms; -webkit-transition: margin 30ms; transition: margin 30mss; }*/
 /*.logo {z-index: 2;}*/
