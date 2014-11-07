@@ -33,7 +33,7 @@ form.steps({
         //return true; 
     },
 
-    onStepChanged: function (event, currentIndex, priorIndex){
+    onStepChanged: function (event, currentIndex, priorIndex) {
         currentIndex++;
         priorIndex++;
         $('#questionnaire-form-step-label').html('step ' + currentIndex);
