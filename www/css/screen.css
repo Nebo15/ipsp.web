@@ -209,7 +209,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
   .clients__info p { margin-bottom: 10px; } }
 @media only screen and (max-width: 900px) { .clients__info { width: 200px; } }
 @media only screen and (max-width: 768px) { .clients__info { width: auto; float: none; } }
-.clients__name { color: #fa5757; }
+.clients__name { color: #555556;}
 
 .team { padding: 25px 0 50px; background: #4ec4cb; background-image: -moz-linear-gradient(left, #5ac8d8 0%, #38bcb2 100%); background-image: -webkit-linear-gradient(left, #5ac8d8 0%, #38bcb2 100%); background-image: linear-gradient(to right, #5ac8d8 0%, #38bcb2 100%); }
 .team .h2 { margin-bottom: 30px; }
@@ -250,7 +250,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .foragents .h3 { text-align: left; margin-bottom: 10px; }
 @media only screen and (max-width: 568px) { .foragents .h3 { text-align: center; } }
 .foragents__text { text-align: left; line-height: 1.3; color: white; font-size: 16px; }
-.foragents__text a { color: #fa5757; font-weight: bold; text-decoration: none; }
+.foragents__text a { color: #555556; font-weight: bold; text-decoration: none; }
 .foragents__text a:hover { text-decoration: underline; }
 
 .faq { padding: 30px 0; }
@@ -265,7 +265,7 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .faq__item article ul { margin-bottom: 25px; }
 .faq__item article ul li { position: relative; padding-left: 8px; }
 .faq__item article ul li:before { content: ""; position: absolute; top: 10px; left: 0; width: 4px; height: 4px; border-radius: 50%; background: #5a5a5b; }
-.faq__title { font-weight: bold; font-size: 20px; color: #fa5757; margin-bottom: 15px; }
+.faq__title { font-weight: bold; font-size: 20px; color: #555556; margin-bottom: 15px; }
 
 .feedback { padding: 40px 0; background: whitesmoke; }
 .feedback .h3 { text-align: left; margin-bottom: 30px; }

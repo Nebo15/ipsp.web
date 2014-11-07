@@ -30,12 +30,44 @@
     .input-conteiner { display: inline-block; height:40px; margin-bottom: 0px; }
 }
 
+/* ----- PopUp ---------- */
+.pop-up 
+{
+    /*width: 200px;*/
+    display:none;
+    width: 400px;
+    margin-top:-150px;
+    margin-left:-226px;
+    top:50%;
+    left:50%;
+    z-index: 50;
+    padding: 25px 25px 25px 25px;
+    border:1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    font-family: "myriadpro", arial, sans-serif;
+}
+.pop-up p 
+{
+  padding-top: 20px;  
+}
+.popup-close 
+{
+    background: #3ec1a7;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "loveloblack", arial, sans-serif;
+} 
+/* ----- End PopUp ---------- */            
+
 .head-label, .step-label
 {
     padding-top:15px;
 }
-
-
 
 #questionnaire-form-step-label
 {
@@ -94,7 +126,6 @@ option
     border-bottom: 0 dotted;
     border-left: 4px solid transparent;
     margin-top: 12px;
-    z-index: 1000;
     position: absolute;
     margin-left:280px;
 }
@@ -326,14 +357,17 @@ option
     padding: 0 10px; 
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 /* ---------- Form Inputs ------------ */
-textarea 
+.input-group-conteiner 
+{
+    font-family: "myriadpro", arial, sans-serif;
+}
+
+textarea
 {
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 .drop-down-input
 {
@@ -344,7 +378,6 @@ textarea
     width:300px; 
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 
 .left-input
@@ -397,7 +430,7 @@ textarea
 
 .checkbox
 {
-    background:url("../img/uncheck.png");
+    background:url("/img/uncheck.png");
     width:18px;
     height:18px;
     background-size: 18px 18px;
@@ -432,17 +465,12 @@ textarea
 {
     display: inline-block;
     margin-bottom: 0.5em;
-   /* font-size: 18pt;*/
-    font-family: "myriadpro", arial, sans-serif;
-
 }
 
 .wizard > .content > .body label.error
 {
     color: #8a1f11;
     display: block;
-    font-family: "myriadpro", arial, sans-serif;
-    z-index: 10000;
     position: absolute;
     font-size:8pt;
     margin-top:-15px;
