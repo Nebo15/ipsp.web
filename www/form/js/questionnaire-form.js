@@ -33,7 +33,7 @@ form.steps({
         //return true;
     },
 
-    onStepChanged: function (event, currentIndex, priorIndex){
+    onStepChanged: function (event, currentIndex, priorIndex) {
         currentIndex++;
         priorIndex++;
         $('#questionnaire-form-step-label').html('step ' + currentIndex);
@@ -57,11 +57,10 @@ form.steps({
                 url: 'send.php',
                 data: {'data' : JSON.stringify(data)},
                 success: function (data) {
-                    alert('Done!');
+                    $( ".questionnaire-form-conteiner" ).css('display','none');
+                    $( ".pop-up" ).slideDown("fast");
                 }
             });
-        } else {
-            alert('Please, fill all the required fields.');
         }
     }
 });

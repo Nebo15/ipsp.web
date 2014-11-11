@@ -12,13 +12,15 @@
     .big-right-input { margin-left:0px; width:280px; }
 
     .input-conteiner { display: block; height:40px; margin-bottom: 10px; }
+
+    .pop-up { width: 250px; margin-top:-109px; margin-left: -151px;}
 }
 
 @media screen and (min-width: 480px) {
     .questionnaire-form-conteiner { *zoom: 1; width: 430px; margin: 0 auto; }
-    
+
     .input-group-conteiner { padding:5px 0px; width: 430px; }
-    
+
     .text-area { width:380px; padding: 10px 10px; font-style: italic; border: 1px solid #ccc; }
 
     .bigest-input { width:380px; }
@@ -26,35 +28,66 @@
     .right-input { margin-left:10px; width:70px; }
 
     .big-right-input { margin-left:10px; width:235px; }
-        
+
     .input-conteiner { display: inline-block; height:40px; margin-bottom: 0px; }
+
+    .pop-up { width: 400px; margin-top:-150px; margin-left:-226px;}
 }
+
+/* ----- PopUp ---------- */
+.pop-up
+{
+    margin-left:-226px;
+    display:none;
+    top:50%;
+    left:50%;
+    z-index: 50;
+    padding: 25px 25px 25px 25px;
+    border:1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    font-family: "myriadpro", arial, sans-serif;
+}
+.pop-up p
+{
+  padding-top: 20px;
+}
+.popup-close
+{
+    background: #3ec1a7;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "loveloblack", arial, sans-serif;
+}
+/* ----- End PopUp ---------- */
 
 .head-label, .step-label
 {
     padding-top:15px;
 }
 
-
-
 #questionnaire-form-step-label
 {
-    color: #3ec1a7; 
-    text-transform: uppercase; 
+    color: #3ec1a7;
+    text-transform: uppercase;
     font-family: "loveloblack", arial, sans-serif;
     font-size: 18pt;
 }
 
 .questionnaire-form-header
 {
-    text-align: center; 
-    color: #555556; 
+    text-align: center;
+    color: #555556;
     text-transform: uppercase;
     font-family: "loveloblack", arial, sans-serif;
     font-size: 18pt;
 }
 
-select::-ms-expand 
+select::-ms-expand
 {
     display: none;
 }
@@ -77,12 +110,12 @@ select::-ms-expand
     -moz-appearance:window;
 }
 
-option 
-{ 
+option
+{
     color: black;
 }
 
-.caret 
+.caret
 {
     display: inline-block;
     width: 0;
@@ -94,7 +127,6 @@ option
     border-bottom: 0 dotted;
     border-left: 4px solid transparent;
     margin-top: 12px;
-    z-index: 1000;
     position: absolute;
     margin-left:280px;
 }
@@ -112,19 +144,19 @@ option
  */
 
 .clearfix:before,
-.clearfix:after 
+.clearfix:after
 {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.clearfix:after 
+.clearfix:after
 {
     clear: both;
 }
 
 /*
-    Common 
+    Common
 */
 
 .wizard,
@@ -145,7 +177,7 @@ option
 .tabcontrol ul
 {
     list-style: none !important;
-    padding: 0;    
+    padding: 0;
 }
 
 .wizard ul > li,
@@ -203,7 +235,7 @@ option
 .wizard > .steps > ul > li
 {
      float: left;
-    padding: 0px;   
+    padding: 0px;
 }
 
 .wizard > .actions > ul > li
@@ -232,7 +264,7 @@ option
     height: 5px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    border-radius: 50%;   
+    border-radius: 50%;
 
 }
 
@@ -321,38 +353,40 @@ option
 {
     display: block;
     border: 1px solid #ccc;
-    display: inline-block; 
-    height: 30px; 
-    padding: 0 10px; 
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 /* ---------- Form Inputs ------------ */
-textarea 
+.input-group-conteiner
+{
+    font-family: "myriadpro", arial, sans-serif;
+}
+
+textarea
 {
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 .drop-down-input
 {
     display: block;
     border: 1px solid #ccc;
-    display: inline-block; 
-    height: 30px; 
-    width:300px; 
+    display: inline-block;
+    height: 30px;
+    width:300px;
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
 }
 
 .left-input
 {
-    width:110px;    
+    width:110px;
 }
 
-.big-input 
+.big-input
 {
     width:280px;
 }
@@ -371,7 +405,7 @@ textarea
 
 .input-conteiner-last-textarea
 {
-     height:80px;  
+     height:80px;
 }
 
 .input-conteiner-border
@@ -389,7 +423,7 @@ textarea
 .wizard > .content > .body input[type="checkbox"]
 {
     display: inline-block;
-    opacity: 0.01;    
+    opacity: 0.01;
     width:20px;
     height:20px;
     margin:0px;
@@ -402,7 +436,7 @@ textarea
     height:18px;
     background-size: 18px 18px;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     float: left;
     padding-right: 10px;
 }
@@ -432,17 +466,12 @@ textarea
 {
     display: inline-block;
     margin-bottom: 0.5em;
-   /* font-size: 18pt;*/
-    font-family: "myriadpro", arial, sans-serif;
-
 }
 
 .wizard > .content > .body label.error
 {
     color: #8a1f11;
     display: block;
-    font-family: "myriadpro", arial, sans-serif;
-    z-index: 10000;
     position: absolute;
     font-size:8pt;
     margin-top:-15px;
@@ -490,8 +519,8 @@ textarea
     padding: 10px;
     text-decoration: none;
     width:100px;
-    font-size: 18px; 
-    text-transform: uppercase; 
+    font-size: 18px;
+    text-transform: uppercase;
     font-family: "loveloblack", arial, sans-serif;
 }
 
@@ -589,7 +618,7 @@ textarea
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 35em; 
+    height: 35em;
     overflow: hidden;
     border-top: 1px solid #bbb;
     padding-top: 20px;
