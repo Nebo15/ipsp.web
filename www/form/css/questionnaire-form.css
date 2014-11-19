@@ -431,7 +431,7 @@ textarea
 
 .checkbox
 {
-    background:url("../img/uncheck.png");
+    background:url("/img/uncheck.png");
     width:18px;
     height:18px;
     background-size: 18px 18px;

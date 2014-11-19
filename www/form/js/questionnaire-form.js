@@ -12,11 +12,11 @@ form.on('click', '#business-address-check', function(){
         adrs = $( "#legal-address :input" ).serializeArray();
         $.each($( "#business-address :input" ).serializeArray(), function (i, field) {
             $( "input[name='" + field.name + "']" ).val(adrs[i].value);
-            $('.checkbox').css('backgroundImage','url("img/check.png")');
+            $('.checkbox').css('backgroundImage','url("/img/check.png")');
         });
     } else {
         $( "#business-address :input" ).val('');
-        $('.checkbox').css('backgroundImage','url("img/uncheck.png")');
+        $('.checkbox').css('backgroundImage','url("/img/uncheck.png")');
     }
 });
 
