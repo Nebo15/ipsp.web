@@ -431,7 +431,7 @@ textarea
 
 .checkbox
 {
-    background:url("../img/uncheck.png");
+    background:url("/img/uncheck.png");
     width:18px;
     height:18px;
     background-size: 18px 18px;
@@ -518,7 +518,7 @@ textarea
     display: block;
     padding: 10px;
     text-decoration: none;
-    width:100px;
+    width:120px;
     font-size: 18px;
     text-transform: uppercase;
     font-family: "loveloblack", arial, sans-serif;

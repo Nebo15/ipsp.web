@@ -264,7 +264,7 @@ head.ready(function() {
         var $email = $this.find('input[name=email]');
         var $phone = $this.find('input[name=phone]');
         var $name = $this.find('input[name=name]');
-        var $message = $this.find('input[name=message]');
+        var $message = $this.find('textarea[name=message]');
         var $type = $this.find('input[name=type]');
         var $fields = $btn.add($email).add($phone).add($name).add($message).add($type);
 
