@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(dirname(dirname(__FILE__))).'/www/vendor/autoload.php');
+require_once(dirname(dirname(dirname(__FILE__))).'/vendor/autoload.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mc    = new Mailchimp('3868f86110f53230458abc41c7bbd0de-us7', ['CURLOPT_FOLLOWLOCATION' => true]);

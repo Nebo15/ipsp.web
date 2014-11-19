@@ -49,14 +49,17 @@ if(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'subscribe') 
     showPage('Перенаправление', 'Ваши данные отправленны, если в течении 5 секунд вы не будете перенаправлены обратно на сайт, то нажмите на <a href="/">ссылку</a>.');
   }
 } elseif(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'contact') {
-  $email = filter_var(array_key_exists('email', $_REQUEST) ? $_REQUEST['email'] : '', FILTER_SANITIZE_EMAIL);
 
+
+  $email = filter_var(array_key_exists('email', $_REQUEST) ? $_REQUEST['email'] : 'noinfo', FILTER_SANITIZE_EMAIL);
+
+  $merge_vars = [];
   $merge_vars = [
-    'phone' => filter_var(array_key_exists('phone', $_REQUEST) ? $_REQUEST['phone'] : '', FILTER_SANITIZE_STRING),
-    'name' => filter_var(array_key_exists('name', $_REQUEST) ? $_REQUEST['name'] : '', FILTER_SANITIZE_STRING),
-    'message' => filter_var(array_key_exists('message', $_REQUEST) ? $_REQUEST['message'] : '', FILTER_SANITIZE_STRING),
-    'user_type' => filter_var(array_key_exists('user_type', $_REQUEST) ? $_REQUEST['user_type'] : '', FILTER_SANITIZE_STRING),
-    'email' => $email
+    'EMAIL'     => $email,
+    'PHONE'     => filter_var(array_key_exists('phone', $_REQUEST) ? $_REQUEST['phone'] : 'noinfo', FILTER_SANITIZE_STRING),
+    'NAME'      => filter_var(array_key_exists('name', $_REQUEST) ? $_REQUEST['name'] : 'noinfo', FILTER_SANITIZE_STRING),
+    'MESSAGE'   => filter_var(array_key_exists('message', $_REQUEST) ? $_REQUEST['message'] : 'noinfo', FILTER_SANITIZE_STRING),
+    'USER_TYPE' => filter_var(array_key_exists('user_type', $_REQUEST) ? $_REQUEST['user_type'] : 'noinfo', FILTER_SANITIZE_STRING),
   ];
 
   $result = $mc->lists->subscribe('aefa645432', ['email' => $email], $merge_vars, 'html', false, true);
