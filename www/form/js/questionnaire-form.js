@@ -12,11 +12,11 @@ form.on('click', '#business-address-check', function(){
         adrs = $( "#legal-address :input" ).serializeArray();
         $.each($( "#business-address :input" ).serializeArray(), function (i, field) {
             $( "input[name='" + field.name + "']" ).val(adrs[i].value);
-            $('.checkbox').css('backgroundImage','url("img/check.png")');
+            $('.checkbox').css('backgroundImage','url("/img/check.png")');
         });
     } else {
         $( "#business-address :input" ).val('');
-        $('.checkbox').css('backgroundImage','url("img/uncheck.png")');
+        $('.checkbox').css('backgroundImage','url("/img/uncheck.png")');
     }
 });
 
@@ -26,9 +26,12 @@ form.steps({
     transitionEffect: "slideLeft",
     stepsOrientation: "horizontal",
     labels: { next: 'next', previous: 'back', finish: 'submit' },
-
+    onInit: function (event, currentIndex) { 
+        $( ".actions > ul" ).prepend( '<li id="form-cansel-button" aria-hidden="false" aria-disabled="false"><a href="http://ipsp.com" role="menuitem">close form</a></li>' );
+    },
     onStepChanging: function (event, currentIndex, newIndex) {
         form.validate().settings.ignore = ":disabled,:hidden";
+        newIndex == 0 ? $( "#form-cansel-button" ).removeClass() : $( "#form-cansel-button" ).attr({"class":"disabled"});
         return newIndex < currentIndex ? true : form.valid(); // Step validation
         //return true;
     },
