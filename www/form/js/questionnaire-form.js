@@ -26,9 +26,12 @@ form.steps({
     transitionEffect: "slideLeft",
     stepsOrientation: "horizontal",
     labels: { next: 'next', previous: 'back', finish: 'submit' },
-
+    onInit: function (event, currentIndex) { 
+        $( ".actions > ul" ).prepend( '<li id="form-cansel-button" aria-hidden="false" aria-disabled="false"><a href="http://ipsp.com" role="menuitem">close form</a></li>' );
+    },
     onStepChanging: function (event, currentIndex, newIndex) {
         form.validate().settings.ignore = ":disabled,:hidden";
+        newIndex == 0 ? $( "#form-cansel-button" ).removeClass() : $( "#form-cansel-button" ).attr({"class":"disabled"});
         return newIndex < currentIndex ? true : form.valid(); // Step validation
         //return true;
     },

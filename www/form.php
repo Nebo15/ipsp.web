@@ -33,7 +33,7 @@ if(!array_key_exists('email', $_REQUEST)) {
   exit('Email is not set');
 }
 
-$mc = new Mailchimp('2e371d9fe765a8c1c7f1a1586a281bdf-us7', ['CURLOPT_FOLLOWLOCATION' => true]);
+$mc = new Mailchimp('3868f86110f53230458abc41c7bbd0de-us7', ['CURLOPT_FOLLOWLOCATION' => true]);
 
 if(array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'subscribe') {
   $email = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
