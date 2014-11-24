@@ -34,6 +34,11 @@
     .pop-up { width: 400px; margin-top:-150px; margin-left:-226px;}
 }
 
+@font-face {
+    font-family: 'myriadpro-reg';
+    src: url("../fonts/myriadpro-reg.otf") format("opentype");
+}
+
 /* ----- PopUp ---------- */
 .pop-up
 {
@@ -47,7 +52,7 @@
     background-color: white;
     position: absolute;
     text-align: center;
-    font-family: "myriadpro", arial, sans-serif;
+    font-family: "myriadpro-reg", sans-serif;
 }
 .pop-up p
 {
@@ -104,7 +109,7 @@ select::-ms-expand
     padding: 0 10px;
     font-style: italic;
     font-size: 8pt;
-    font-family: "myriadpro", arial, sans-serif;
+    font-family: "myriadpro-reg", sans-serif;
     border-radius: 0;
     -webkit-appearance: none;
     -moz-appearance:window;
@@ -362,7 +367,7 @@ option
 /* ---------- Form Inputs ------------ */
 .input-group-conteiner
 {
-    font-family: "myriadpro", arial, sans-serif;
+    font-family:'myriadpro-reg', sans-serif;
 }
 
 textarea
