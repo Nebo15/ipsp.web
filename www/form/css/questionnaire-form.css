@@ -36,7 +36,16 @@
 
 @font-face {
     font-family: 'myriadpro-reg';
-    src: url("../fonts/myriadpro-reg.otf") format("opentype");
+    src: url("fonts/myriadpro-reg.otf") format("opentype");
+}
+
+@font-face { 
+    font-family: loveloblack; 
+    src: url("fonts/lovelo_black-webfont.eot"); 
+    src: url("fonts/lovelo_black-webfont.eot?#iefix") format("embedded-opentype"), 
+    url("fonts/lovelo_black-webfont.woff") format("woff"), 
+    url("fonts/lovelo_black-webfont.ttf") format("truetype"); 
+    font-weight: normal; font-style: normal; 
 }
 
 /* ----- PopUp ---------- */
