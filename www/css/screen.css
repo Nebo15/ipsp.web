@@ -311,14 +311,14 @@ body { font-size: 12px; font-family: "Myriad Pro", sans-serif; line-height: 1.4;
 .success-msg { margin-top: 10px; }
 .success-msg .h3_smaller { margin-bottom: 0; }
 
-.contacts { padding: 30px 0; background: #1f7abf; background-image: -moz-linear-gradient(left, #1f7abf 0%,  #1dbce8 100%); background-image: -webkit-linear-gradient(left, #1f7abf 0%,  #1dbce8 100%); background-image: linear-gradient(to right, #1f7abf 0%, #1dbce8 100%); }
+.contacts { padding: 40px 0; background: #1f7abf; background-image: -moz-linear-gradient(left, #1f7abf 0%,  #1dbce8 100%); background-image: -webkit-linear-gradient(left, #1f7abf 0%,  #1dbce8 100%); background-image: linear-gradient(to right, #1f7abf 0%, #1dbce8 100%); }
 .contacts .h2 { margin-bottom: 0px;}
 .contacts .h3 { text-align: left; text-transform: uppercase;}
 .contacts__inner { *zoom: 1; font-size: 16px; color: white; }
 .contacts__inner:after { content: " "; display: table; clear: both; }
-.contacts__left { float: left; width: 100%; }
+.contacts__left { float: left; width: 100%; padding-top: 30px;}
 @media only screen and (max-width: 768px) { .contacts__left { width: 45%; } }
-.contacts__right { float: right; width: 100%; margin-top: 60px;}
+.contacts__right { float: right; width: 100%; margin-top: 40px;}
 @media only screen and (max-width: 768px) { .contacts__right { width: 45%; } }
 .contacts__item {float:left;padding-right: 70px;}
 
